@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/exhibition/exhibition1.webp',
+    alt: 'icon-school-of-excellence-exhibition-1',
+  },
+  {
+    src: '/assets/images/events/exhibition/exhibition2.webp',
+    alt: 'icon-school-of-excellence-exhibition-2',
+  },
+  {
+    src: '/assets/images/events/exhibition/exhibition3.webp',
+    alt: 'icon-school-of-excellence-exhibition-3',
+  },
+  {
+    src: '/assets/images/events/exhibition/exhibition4.webp',
+    alt: 'icon-school-of-excellence-exhibition-4',
+  },
+  {
+    src: '/assets/images/events/exhibition/exhibition5.webp',
+    alt: 'icon-school-of-excellence-exhibition-5',
+  },
+  {
+    src: '/assets/images/events/exhibition/exhibition6.webp',
+    alt: 'icon-school-of-excellence-exhibition-6',
+  },
+];
+---
+
+<Layout
+  title="Science & Social Studies Exhibition | Icon School of Excellence"
+  description="Explore the innovative projects showcased during the Science & Social Studies Exhibition at Icon School of Excellence, Bangalore. A celebration of creativity and learning."
+  keywords="Science exhibition Bangalore, Social studies projects, student creativity, Icon School exhibitions, academic events"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/exhibition"
+>
+  <EventsList
+    event_title="Science & Social Studies Exhibition"
+    event_sub_title="Explore the latest photos from our  Science & Social Studies Exhibition at ISOE"
+    paragraph=`On 16th November 2024, Icon School of Excellence proudly
+                  hosted an Interdisciplinary Science & Social Studies
+                  Exhibition. The event showcased the creativity and hard work
+                  of our students as they presented innovative projects that
+                  seamlessly integrated scientific concepts with social studies
+                  themes. From models of sustainable energy solutions to
+                  historical timelines, the exhibition covered a wide range of
+                  topics, highlighting the connection between science, society,
+                  and the environment. The students demonstrated their deep
+                  understanding through interactive displays, experiments, and
+                  presentations, impressing visitors with their knowledge and
+                  enthusiasm. It was a remarkable day of learning and
+                  exploration, reflecting the dedication to academic excellence
+                  and holistic development at our school`
+    images={images}
+  />
+</Layout>

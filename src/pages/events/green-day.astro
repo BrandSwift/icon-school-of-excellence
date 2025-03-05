@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green1.webp',
+    alt: 'icon-school-of-excellence-green-day-1',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green2.webp',
+    alt: 'icon-school-of-excellence-green-day-2',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green3.webp',
+    alt: 'icon-school-of-excellence-green-day-3',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green4.webp',
+    alt: 'icon-school-of-excellence-green-day-4',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green5.webp',
+    alt: 'icon-school-of-excellence-green-day-5',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green6.webp',
+    alt: 'icon-school-of-excellence-green-day-6',
+  },
+];
+---
+
+<Layout
+  title="Green Colour Day | Icon School of Excellence"
+  description="Celebrate Green Colour Day at Icon School of Excellence with fun activities that teach the importance of nature and colors in Bangalore"
+  keywords="Green Colour Day Bangalore, color activities for kids, school celebrations, Icon School events"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/green-day"
+>
+  <EventsList
+    event_title="Green Colour Day"
+    event_sub_title="Explore the latest photos from our Green Colour Day celebration at ISOE"
+    paragraph=`Icon School of Excellence celebrated a vibrant
+                                Green Colour Day with Nursery and KG students
+                                dressed in various shades of green. The day was
+                                filled with fun activities, including creative
+                                green-themed crafts and interactive storytelling
+                                that taught children about nature and the
+                                environment. Through games and learning about
+                                plants and animals, students enjoyed a day full
+                                of laughter, creativity, and community. Thanks
+                                to everyone who helped make the event special,
+                                and we look forward to more colorful
+                                celebrations in the future!`
+    images={images}
+  />
+</Layout>

@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/icon school krishna jenmastami2.webp',
+    alt: 'icon-school-of-excellence-sri-krishna-1',
+  },
+  {
+    src: '/assets/images/events/icon school krishna jenmastami.webp',
+    alt: 'icon-school-of-excellence-sri-krishna-2',
+  },
+  {
+    src: '/assets/images/events/icon school of excellence krishna jenmastami3.webp',
+    alt: 'icon-school-of-excellence-sri-krishna-3',
+  },
+  {
+    src: '/assets/images/events/icon school of excellence krishna jenmastami4.webp',
+    alt: 'icon-school-of-excellence-sri-krishna-4',
+  },
+  {
+    src: '/assets/images/events/icon school of excellence krishna jenmastami5.webp',
+    alt: 'icon-school-of-excellence-sri-krishna-5',
+  },
+  {
+    src: '/assets/images/events/icon school of excellence krishna jenmastami6.webp',
+    alt: 'icon-school-of-excellence-sri-krishna-6',
+  },
+];
+---
+
+<Layout
+  title="Sri Krishna Janmashtami Celebration | Icon School of Excellence"
+  description="Experience the joy of Sri Krishna Janmashtami at Icon School of Excellence, with cultural performances and festivities in Bangalore"
+  keywords="Janmashtami celebrations Bangalore, school cultural events, Krishna festivities, Icon School traditions"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/sri-krishna-janmashtami"
+>
+  <EventsList
+    event_title="Sri Krishna Janmashtami"
+    event_sub_title="Explore the latest photos from our Sri Krishna Janmashtami celebration at ISOE"
+    paragraph=`The Krishna Janmashtami celebration at Icon
+                                School of Excellence was a vibrant event where
+                                children organized an engaging assembly.
+                                Kindergarten students dressed up as little
+                                Krishna and Radha, adding to the festive spirit.
+                                The assembly featured songs, dances, and
+                                reenactments, showcasing the significance of the
+                                occasion and fostering joy and community among
+                                students and staff`
+    images={images}
+  />
+</Layout>

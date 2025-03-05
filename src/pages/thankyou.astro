@@ -1,0 +1,141 @@
+---
+import Header from "../components/header.astro";
+import HeaderThank from "../components/header_thank.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+    title=""
+    description=""
+    keywords=""
+    og_title=""
+    og_description=""
+    og_image=""
+    og_url=""
+    twitter_description=""
+    twitter_image=""
+    robots=""
+    canonical=""
+>
+    <body>
+        <div class="page-wrapper">
+            <HeaderThank />
+            <main class="main-wrapper">
+                <div class="container-thank">
+                    <!-- Left Blog Title -->
+                    <div class="blog-left">
+                        <img
+                            src="/assets/images/blog/icse-schools-in-bangalore.webp"
+                            alt=""
+                            style="border-radius: 10px"
+                        />
+                        <h5>
+                            <a
+                                href="/blogs/How-ICSE-Schools-in-Bangalore-Are-Shaping-the-Future-of-Education"
+                                style="text-decoration: none;"
+                            >
+                                How ICSE Schools in Bangalore Are Shaping the
+                                Future of Education</a
+                            >
+                        </h5>
+                    </div>
+
+                    <!-- Thank You Content (Centered) -->
+                    <div class="thank-content">
+                        <img
+                            src="/assets/images/icons/send-mail.png"
+                            loading="lazy"
+                            decoding="async"
+                            alt="icon-school-of-excellence-extra-curricular-activities-page"
+                        />
+                        <p
+                            style="font-size: 35px; font-weight: 600; font-family: Poppins, sans-serif; padding-bottom: 20px; color: #e31e26;;"
+                        >
+                            Thank you for submitting your details!
+                        </p>
+                        <p
+                            style="font-size: 22px; ont-family: Poppins, sans-serif;"
+                        >
+                            We will review your submission shortly!
+                        </p>
+                        <div class="margin-top margin-medium">
+                            <div
+                                blocks-slot-children="ST232"
+                                blocks-name="button-group"
+                                class="button-group"
+                            >
+                                <a
+                                    blocks-name="button-2"
+                                    href="/"
+                                    class="button is-secondary w-button"
+                                    >Go Home</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Blog Title -->
+                    <div class="blog-right">
+                        <img
+                            src="/assets/images/blog/icon-school-of-excellence-why-icse.webp"
+                            alt=""
+                            style="border-radius: 10px"
+                        />
+                        <h5>
+                            <a
+                                href="/blogs/why-icse"
+                                style="text-decoration: none;"
+                                >Top Reasons Why ICSE Schools in Bangalore Offer
+                                a Superior Education Experience</a
+                            >
+                        </h5>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+    <style>
+        .container-thank {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            align-items: center;
+            text-align: center;
+        }
+        .blog-left {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 50%;
+            border-radius: 10px;
+            margin-left: 1rem;
+        }
+        .thank-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            padding: 10px;
+        }
+        .thank-content p {
+            text-align: center;
+        }
+        .blog-right {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin-top: 50%;
+            border-radius: 10px;
+            margin-right: 1rem;
+        }
+        @media screen and (max-width: 990px) {
+            .container-thank {
+                display: flex;
+                flex-direction: column;
+                margin-top: 10%;
+            }
+            .blog-left {
+                display: none;
+            }
+            .blog-right {
+                display: none;
+            }
+        }
+    </style>
+</Layout>

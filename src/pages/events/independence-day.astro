@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/independence day/icon school of excellence independence day2.webp',
+    alt: 'icon-school-of-excellence-independence-day-1',
+  },
+  {
+    src: '/assets/images/events/independence day/icon school of excellence independence day1.webp',
+    alt: 'icon-school-of-excellence-independence-day-2',
+  },
+  {
+    src: '/assets/images/events/independence day/icon school of excellence independence day3.webp',
+    alt: 'icon-school-of-excellence-independence-day-3',
+  },
+  {
+    src: '/assets/images/events/independence day/icon school of excellence independence day4.webp',
+    alt: 'icon-school-of-excellence-independence-day-4',
+  },
+  {
+    src: '/assets/images/events/independence day/icon school of excellence independence day5.webp',
+    alt: 'icon-school-of-excellence-independence-day-5',
+  },
+  {
+    src: '/assets/images/events/independence day/icon school of excellence independence day6.webp',
+    alt: 'icon-school-of-excellence-independence-day-6',
+  },
+];
+---
+
+<Layout
+  title="Independence Day Celebration | Icon School of Excellence"
+  description="Celebrate India's Independence Day at Icon School of Excellence with patriotic performances and tributes in Bangalore"
+  keywords="Independence Day Bangalore, school patriotic events, student performances, Icon School celebrations"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/independence-day"
+>
+  <EventsList
+    event_title="Independence Day"
+    event_sub_title="Explore the latest photos from our Independence Day celebration at ISOE"
+    paragraph=` On August 15th, 2023, Icon School of Excellence
+                                celebrated the 77th Independence Day with a
+                                series of patriotic events. The program,
+                                attended by Chairman Mr. Nishanth N, Principal
+                                Ms. Alphonsa George, teachers, and students,
+                                featured inspiring speeches, songs, dances, and
+                                a synchronized march past. The dedication and
+                                enthusiasm of both students and staff made the
+                                celebration a heartfelt tribute to the nation’s
+                                independence`
+    images={images}
+  />
+</Layout>

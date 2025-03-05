@@ -1,0 +1,46 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/fathers-day/icon school of excellence - fathers-day3.webp',
+    alt: 'icon-school-of-excellence-father-day-1',
+  },
+  {
+    src: '/assets/images/events/fathers-day/icon school of excellence - fathers-day2.webp',
+    alt: 'icon-school-of-excellence-father-day-2',
+  },
+  {
+    src: '/assets/images/events/fathers-day/icon school of excellence - fathers-day5.webp',
+    alt: 'icon-school-of-excellence-father-day-3',
+  },
+  {
+    src: '/assets/images/events/fathers-day/icon school of excellence - fathers-day4.webp',
+    alt: 'icon-school-of-excellence-father-day-4',
+  },
+];
+---
+
+<Layout
+  title="Father's Day Celebration | Icon School of Excellence"
+  description="Icon School of Excellence honors Father's Day with special activities and performances by students in Bangalore"
+  keywords="Father's Day Bangalore, student performances, school celebrations, Icon School events"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/fathers-day"
+>
+  <EventsList
+    event_title="Father’s Day Celebrations"
+    event_sub_title="Explore the latest photos from our Father’s Day Celebrations celebration at ISOE"
+    paragraph=` At Icon School of Excellence, we celebrated
+                                Father’s Day with a heartfelt activity where our
+                                students created personalized cards for their
+                                fathers. This initiative allowed children to
+                                express their love and appreciation in a
+                                meaningful way. Through this activity we extend
+                                our warmest wishes to all the incredible fathers
+                                in our community. Thank you for your unwavering
+                                support and dedication!`
+    images={images}
+  />
+</Layout>

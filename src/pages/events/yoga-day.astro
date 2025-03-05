@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/yoga day/icon school of excellence yoda-day1.webp',
+    alt: 'icon-school-of-excellence-green-day-1',
+  },
+  {
+    src: '/assets/images/events/yoga day/icon school of excellence yoda-day2.webp',
+    alt: 'icon-school-of-excellence-green-day-2',
+  },
+  {
+    src: '/assets/images/events/yoga day/icon school of excellence yoda-day3.webp',
+    alt: 'icon-school-of-excellence-green-day-3',
+  },
+  {
+    src: '/assets/images/events/yoga day/icon school of excellence yoda-day4.webp',
+    alt: 'icon-school-of-excellence-green-day-4',
+  },
+];
+---
+
+<Layout
+  title="International Yoga Day | Icon School of Excellence"
+  description="Icon School of Excellence celebrates International Yoga Day with sessions to promote wellness and mindfulness among students in Bangalore"
+  keywords="Yoga Day Bangalore, school wellness programs, yoga sessions, Icon School activities"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/yoga-day"
+>
+  <EventsList
+    event_title="International Yoga Day"
+    event_sub_title="Explore the latest photos from our International Yoga Day celebration at ISOE"
+    paragraph=`We celebrated both the International Day of Yoga
+                                and World Music Day. Our students participated
+                                in invigorating yoga sessions, promoting
+                                physical and mental well-being. Additionally,
+                                they delivered insightful speeches on the
+                                significance of music in our lives, showcasing
+                                their creativity and public speaking skills.
+                                These events fostered a greater appreciation for
+                                both yoga and music, enriching our students'
+                                overall educational experience`
+    images={images}
+  />
+</Layout>

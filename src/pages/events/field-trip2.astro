@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/field-trip2/icon-school-of-excellence-filed-trip.webp',
+    alt: 'icon-school-of-excellence-field-trip-1',
+  },
+  {
+    src: '/assets/images/events/field-trip2/icon-school-of-excellence-filed-trip-7.webp',
+    alt: 'icon-school-of-excellence-field-trip-2',
+  },
+  {
+    src: '/assets/images/events/field-trip2/icon-school-of-excellence-filed-trip-1.webp',
+    alt: 'icon-school-of-excellence-field-trip-3',
+  },
+  {
+    src: '/assets/images/events/field-trip2/icon-school-of-excellence-filed-trip-3.webp',
+    alt: 'icon-school-of-excellence-field-trip-4',
+  },
+  {
+    src: '/assets/images/events/field-trip2/icon-school-of-excellence-filed-trip-4.webp',
+    alt: 'icon-school-of-excellence-field-trip-5',
+  },
+  {
+    src: '/assets/images/events/field-trip2/icon-school-of-excellence-filed-trip-5.webp',
+    alt: 'icon-school-of-excellence-field-trip-6',
+  },
+];
+---
+
+<Layout
+  title="Kindergarten Field Trip to Bannerghatta National Park - Icon School of Excellence"
+  description="Discover the excitement of our kindergarten students' field trip to Bannerghatta National Park. A fun and educational day filled with wildlife, nature exploration, and lasting memories."
+  keywords="kindergarten field trip, Bannerghatta National Park, Icon School of Excellence, wildlife exploration, educational trip, student activities, nature learning, school field trips, memorable experiences"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/field-trip2/"
+>
+  <EventsList
+    event_title="Field Trip"
+    event_sub_title="Kindergarten Field Trip to Bannerghatta National Park"
+    paragraph=`Our kindergarteners embarked on an exciting field trip to Bannerghatta National Park. The children explored the park, enjoyed a thrilling safari ride, and observed animals like lions, tigers, and elephants up close.
+
+They also visited the butterfly park, where colorful butterflies delighted everyone. The trip was both educational and fun, sparking curiosity and fostering a love for nature.
+
+It was a memorable day filled with learning, laughter, and adventure, leaving our little ones with cherished memories of their first wildlife experience.`
+    images={images}
+  />
+</Layout>

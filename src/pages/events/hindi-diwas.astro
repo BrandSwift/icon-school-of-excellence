@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/hindi diwas/icon school of excellence hindi diwas1.webp',
+    alt: 'icon-school-of-excellence-hindi-diwas-1',
+  },
+  {
+    src: '/assets/images/events/hindi diwas/icon school of excellence hindi diwas2.webp',
+    alt: 'icon-school-of-excellence-hindi-diwas-2',
+  },
+  {
+    src: '/assets/images/events/hindi diwas/icon school of excellence hindi diwas3.jpg',
+    alt: 'icon-school-of-excellence-hindi-diwas-3',
+  },
+  {
+    src: '/assets/images/events/hindi diwas/icon school of excellence hindi diwas4.webp',
+    alt: 'icon-school-of-excellence-hindi-diwas-4',
+  },
+  {
+    src: '/assets/images/events/hindi diwas/icon school of excellence hindi diwas5.webp',
+    alt: 'icon-school-of-excellence-hindi-diwas-5',
+  },
+  {
+    src: '/assets/images/events/hindi diwas/icon school of excellence hindi diwas6.webp',
+    alt: 'icon-school-of-excellence-hindi-diwas-6',
+  },
+];
+---
+
+<Layout
+  title="Hindi Divas Celebration | Icon School of Excellence"
+  description="Celebrate Hindi Divas at Icon School of Excellence with activities that highlight the richness of the Hindi language in Bangalore"
+  keywords="Hindi Divas Bangalore, language day celebrations, school events, Icon School Hindi programs"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/hindi-diwas"
+>
+  <EventsList
+    event_title="Hindi Divas"
+    event_sub_title="Explore the latest photos from our Hindi Divas celebration at ISOE"
+    paragraph=` The Hindi Divas celebration at Icon School of
+                                Excellence was a vibrant event that honored the
+                                beauty of the Hindi language and culture.
+                                Students gave inspiring speeches, performed
+                                engaging plays, and recited poetry, while
+                                traditional songs enriched the experience.
+                                Teachers and parents joined in, fostering a
+                                shared appreciation for our linguistic heritage,
+                                making it a joyful and unifying event for the
+                                school community`
+    images={images}
+  />
+</Layout>

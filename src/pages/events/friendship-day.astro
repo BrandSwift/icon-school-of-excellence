@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/friendship day/icon school of excellence.webp',
+    alt: 'icon-school-of-excellence-friendship-day-1',
+  },
+  {
+    src: '/assets/images/events/friendship day/icon school of excellence1.webp',
+    alt: 'icon-school-of-excellence-friendship-day-2',
+  },
+  {
+    src: '/assets/images/events/friendship day/icon school of excellence2.webp',
+    alt: 'icon-school-of-excellence-friendship-day-3',
+  },
+  {
+    src: '/assets/images/events/friendship day/icon school of excellence3.webp',
+    alt: 'icon-school-of-excellence-friendship-day-4',
+  },
+  {
+    src: '/assets/images/events/friendship day/icon school of excellence4.webp',
+    alt: 'icon-school-of-excellence-friendship-day-5',
+  },
+  {
+    src: '/assets/images/events/friendship day/icon school of excellence5.webp',
+    alt: 'icon-school-of-excellence-friendship-day-6',
+  },
+];
+---
+
+<Layout
+  title="Friendship Day Celebration | Icon School of Excellence"
+  description="Celebrate Friendship Day at Icon School of Excellence, fostering bonds and fun activities among students in Bangalore"
+  keywords="Friendship Day Bangalore, student bonding activities, Icon School celebrations, school friendship events"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/friendship-day"
+>
+  <EventsList
+    event_title="Friendship Day"
+    event_sub_title="Explore the latest photos from our Friendship Day celebration at ISOE"
+    paragraph=` Icon School of Excellence celebrated
+                                International Friendship Day with Nursery and KG
+                                students through activities that emphasized
+                                friendship, kindness, and teamwork. The day
+                                featured fun games, group activities, and arts
+                                and crafts, where children made friendship
+                                bracelets and cards. They also shared stories
+                                that highlighted the value of friendship,
+                                strengthening their bonds with one another. The
+                                event fostered camaraderie and taught the joy of
+                                supporting and caring for friends. Thank you to
+                                everyone who made the day special, and here's to
+                                the wonderful friendships growing in our school
+                                community!`
+    images={images}
+  />
+</Layout>

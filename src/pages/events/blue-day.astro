@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/blue day/Icon school of excellence blue1.webp',
+    alt: 'icon-school-of-excellence-blue-day-1',
+  },
+  {
+    src: '/assets/images/events/blue day/Icon school of excellence blue2.webp',
+    alt: 'icon-school-of-excellence-blue-day-2',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green3.webp',
+    alt: 'icon-school-of-excellence-blue-day-3',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green4.webp',
+    alt: 'icon-school-of-excellence-blue-day-4',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green5.webp',
+    alt: 'icon-school-of-excellence-blue-day-5',
+  },
+  {
+    src: '/assets/images/events/green day/icon scool of excellence - green6.webp',
+    alt: 'icon-school-of-excellence-blue-day-6',
+  },
+];
+---
+
+<Layout
+  title="Blue Colour Day | Icon School of Excellence"
+  description="Icon School of Excellence celebrates Blue Colour Day to teach young learners about colors through fun and interactive activities in Bangalore"
+  keywords="Blue Colour Day Bangalore, color learning activities, school fun events, Icon School celebrations"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/blue-day"
+>
+  <EventsList
+    event_title="Blue Colour Day"
+    event_sub_title="Explore the latest photos from our Blue Colour Day celebration at ISOE"
+    paragraph=` We celebrated a joyful Blue Colour Day with
+                                Nursery and KG students, who came dressed in
+                                various shades of blue. The day was filled with
+                                fun activities, including blue-themed arts and
+                                crafts where students created beautiful artwork.
+                                Through storytelling and games, they learned
+                                about the significance of the color blue in
+                                nature and culture. The atmosphere was lively,
+                                filled with laughter and creativity. Thank you
+                                to all the students and families who made this
+                                day special, and we look forward to more
+                                colorful celebrations in the future!`
+    images={images}
+  />
+</Layout>

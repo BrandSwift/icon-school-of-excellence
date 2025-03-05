@@ -1,0 +1,58 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/grand parents/icon school of excellence - GPDC1.webp',
+    alt: 'icon-school-of-excellence-grand-parents-day-1',
+  },
+  {
+    src: '/assets/images/events/grand parents/icon school of excellence - GPDC3.webp',
+    alt: 'icon-school-of-excellence-grand-parents-day-2',
+  },
+  {
+    src: '/assets/images/events/grand parents/icon school of excellence - GPDC4.webp',
+    alt: 'icon-school-of-excellence-grand-parents-day-3',
+  },
+  {
+    src: '/assets/images/events/grand parents/icon school of excellence - GPDC5.webp',
+    alt: 'icon-school-of-excellence-grand-parents-day-4',
+  },
+  {
+    src: '/assets/images/events/grand parents/icon school of excellence - GPDC6.webp',
+    alt: 'icon-school-of-excellence-grand-parents-day-5',
+  },
+  {
+    src: '/assets/images/events/grand parents/icon school of excellence - GPDC7.webp',
+    alt: 'icon-school-of-excellence-grand-parents-day-6',
+  },
+];
+---
+
+<Layout
+  title="Grandparents' Day Celebration | Icon School of Excellence"
+  description="Celebrate Grandparents' Day at Icon School of Excellence with heartfelt performances and interactions in Bangalore."
+  keywords="Grandparents' Day Bangalore, school family events, Icon School celebrations, student performances"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/grandparentsday"
+>
+  <EventsList
+    event_title="Grand Parents Day Celebration"
+    event_sub_title="Explore the latest photos from our Grand Parents Day Celebration at ISOE"
+    paragraph=` We celebrated Grandparents Day, honoring the
+                                special bond between students and their
+                                grandparents. Nursery and KG students welcomed
+                                them with handmade cards and heartfelt
+                                performances, including songs and poems
+                                celebrating their wisdom and love. Fun
+                                activities like storytelling and arts and crafts
+                                allowed families to create lasting memories
+                                together. The event highlighted the invaluable
+                                role grandparents play in our lives, fostering a
+                                strong sense of community. Thank you to all the
+                                grandparents who made this day truly
+                                unforgettable!`
+    images={images}
+  />
+</Layout>

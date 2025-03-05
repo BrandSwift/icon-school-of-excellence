@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/gandhi jayanti/icon school of excellence gandhi jayanti4.webp',
+    alt: 'icon-school-of-excellence-ganthi-jayandhi-1',
+  },
+  {
+    src: '/assets/images/events/gandhi jayanti/icon school of excellence gandhi jayanti.webp',
+    alt: 'icon-school-of-excellence-ganthi-jayandhi-2',
+  },
+  {
+    src: '/assets/images/events/gandhi jayanti/icon school of excellence gandhi jayanti1.webp',
+    alt: 'icon-school-of-excellence-ganthi-jayandhi-3',
+  },
+  {
+    src: '/assets/images/events/gandhi jayanti/icon school of excellence gandhi jayanti2.webp',
+    alt: 'icon-school-of-excellence-ganthi-jayandhi-4',
+  },
+  {
+    src: '/assets/images/events/gandhi jayanti/icon school of excellence gandhi jayanti3.webp',
+    alt: 'icon-school-of-excellence-ganthi-jayandhi-5',
+  },
+  {
+    src: '/assets/images/events/gandhi jayanti/icon school of excellence gandhi jayanti5.webp',
+    alt: 'icon-school-of-excellence-ganthi-jayandhi-6',
+  },
+];
+---
+
+<Layout
+  title="Gandhi Jayanthi Celebration | Icon School of Excellence"
+  description="Icon School of Excellence honors the legacy of Mahatma Gandhi on Gandhi Jayanthi with thoughtful activities and tributes in Bangalore."
+  keywords="Gandhi Jayanthi Bangalore, school events, Mahatma Gandhi tributes, Icon School activities"
+  robots="ndex, follow"
+  canonical="https://iconschoolofexcellence.com/events/ganthi-jayanti"
+>
+  <EventsList
+    event_title="Gandhi Jayanti"
+    event_sub_title="Explore the latest photos from our Gandhi Jayanti celebration at ISOE"
+    paragraph=` Gandhi Jayanti was celebrated with inspiring
+                                speeches highlighting Mahatma Gandhi's
+                                principles of non-violence and truth. Skits and
+                                songs illustrated his teachings, while students
+                                participated in a community service activity
+                                (Swachh Bharat Abhiyan), embodying his spirit of
+                                selflessness. The celebration deepened
+                                appreciation for Gandhi's legacy and encouraged
+                                everyone to embrace his ideals in daily life`
+    images={images}
+  />
+</Layout>

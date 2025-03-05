@@ -1,0 +1,49 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/election/icon school of excellence - election1.webp',
+    alt: 'icon-school-of-excellence-election-1',
+  },
+  {
+    src: '/assets/images/events/election/icon school of excellence - election3.webp',
+    alt: 'icon-school-of-excellence-election-2',
+  },
+  {
+    src: '/assets/images/events/election/icon school of excellence.webp',
+    alt: 'icon-school-of-excellence-election-3',
+  },
+  {
+    src: '/assets/images/events/election/icon school of excellence - election4.webp',
+    alt: 'icon-school-of-excellence-election-4',
+  },
+];
+---
+
+<Layout
+  title="Student Council Election | Icon School of Excellence"
+  description="Witness leadership in action at Icon School of Excellence during the Student Council Elections in Bangalore"
+  keywords="Student elections Bangalore, school leadership programs, Icon School council, student governance"
+  robots="ndex, follow"
+  canonical="https://iconschoolofexcellence.com/events/election"
+>
+  <EventsList
+    event_title="Student Council Election"
+    event_sub_title="Explore the latest photos from ourStudent Council Election at ISOE"
+    paragraph=` The School Election at Icon School of Excellence
+                                was an event that encouraged leadership and
+                                civic engagement among students. Candidates from
+                                different grades campaigned for student council
+                                positions, presenting their ideas for improving
+                                school life through speeches. Voting was
+                                conducted in a structured way, teaching students
+                                about democracy and the value of participation.
+                                The election ended with a lively ceremony
+                                celebrating the new representatives, fostering a
+                                sense of responsibility and community
+                                involvement among students`
+    images={images}
+  />
+</Layout>

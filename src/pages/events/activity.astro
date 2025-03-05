@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import EventsList from '../../components/events-list.astro';
+
+const images = [
+  {
+    src: '/assets/images/events/activity/icon school of excellence activity2.webp',
+    alt: 'icon-school-of-excellence-hands-on-activity-1',
+  },
+  {
+    src: '/assets/images/events/activity/icon school of excellence activity3.webp',
+    alt: 'icon-school-of-excellence-hands-on-activity-2',
+  },
+  {
+    src: '/assets/images/events/activity/icon school of excellence activity4.webp',
+    alt: 'icon-school-of-excellence-hands-on-activity-3',
+  },
+  {
+    src: '/assets/images/events/activity/icon school of excellence activity5.webp',
+    alt: 'icon-school-of-excellence-hands-on-activity-4',
+  },
+  {
+    src: '/assets/images/events/activity/icon school of excellence activity6.webp',
+    alt: 'icon-school-of-excellence-hands-on-activity-5',
+  },
+  {
+    src: '/assets/images/events/activity/icon school of excellence activity7.webp',
+    alt: 'icon-school-of-excellence-hands-on-activity-6',
+  },
+];
+---
+
+<Layout
+  title="Hands-On Activity | Icon School of Excellence"
+  description="Experience experiential learning at Icon School of Excellence with hands-on activities that spark curiosity and innovation in Bangalore"
+  keywords="hands-on learning Bangalore, experiential education, innovative teaching methods, Icon School activities"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/activity"
+>
+  <EventsList
+    event_title="Hands on Activity"
+    event_sub_title="Explore the latest photos from our Hands on Activity at ISOE"
+    paragraph=` we enhance learning with weekly hands-on
+                                activities across all subjects. In science,
+                                students perform interactive experiments, while
+                                in language arts, creative writing workshops and
+                                storytelling sessions build communication
+                                skills. Mathematics involves real-world
+                                problem-solving, and social studies uses
+                                role-playing to explore history and cultures.
+                                Art and music projects foster creativity and
+                                self-expression, while physical education
+                                promotes teamwork and fitness through games.
+                                These activities help students engage deeply
+                                with the curriculum, encouraging a love for
+                                learning in every subject`
+    images={images}
+  />
+</Layout>

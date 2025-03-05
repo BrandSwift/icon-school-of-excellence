@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+  {
+    src: "/assets/images/events/food-carnival/food-carnival-2.webp",
+    alt: "icon-school-of-excellence-hands-on-activity-1",
+  },
+  {
+    src: "/assets/images/events/food-carnival/food-carnival-3.webp",
+    alt: "icon-school-of-excellence-hands-on-activity-2",
+  },
+  {
+    src: "/assets/images/events/food-carnival/food-carnival-4.webp",
+    alt: "icon-school-of-excellence-hands-on-activity-3",
+  },
+  {
+    src: "/assets/images/events/food-carnival/food-carnival-5.webp",
+    alt: "icon-school-of-excellence-hands-on-activity-4",
+  },
+  {
+    src: "/assets/images/events/food-carnival/food-carnival-6.webp",
+    alt: "icon-school-of-excellence-hands-on-activity-5",
+  },
+  {
+    src: "/assets/images/events/food-carnival/food-carnival-7.webp",
+    alt: "icon-school-of-excellence-hands-on-activity-6",
+  },
+];
+---
+
+<Layout
+  title="Food Carnival Event Lineup | ICON School of Excellence"
+  description="xplore the exciting list of events at the ICON School of Excellence Food Carnival! From delicious food stalls to fun-filled activities, get ready for a day of flavors, fun, and festivities"
+  keywords="Food Carnival, ICON School of Excellence, food festival, school event, food stalls, fun activities, family event, student fest, cultural celebration, school carnival"
+  robots="index, follow"
+  canonical="https://iconschoolofexcellence.com/events/food-carnival"
+>
+  <EventsList
+    event_title="Food Carnival"
+    event_sub_title="Explore the latest photos from our Food Carnival at ISOE"
+    paragraph=` We bring excitement to learning with our Food Carnival, where students explore the world of flavors through hands-on experiences. From setting up food stalls and preparing delicious dishes to learning about nutrition and cultural cuisines, this event blends fun with education. Cooking challenges encourage teamwork, while interactive sessions on healthy eating promote awareness. Students also engage in food-themed art, storytelling, and math-based activities like budgeting and measurements. The Food Carnival is a celebration of creativity, collaboration, and culinary skills, making learning a truly flavorful experience`
+    images={images}
+  />
+</Layout>

@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from './header.astro';
+import Footer from './footer.astro';
+
+const { event_title, event_sub_title, paragraph, images } = Astro.props;
+---
+
+<Layout title="">
+  <body>
+    <div class="page-wrapper">
+      <Header />
+
+      <main class="main-wrapper">
+        <section id="gallery" class="section_home_socials">
+          <div class="padding-global-4">
+            <div class="container-large-2">
+              <div
+                blocks-name="max-width-large"
+                blocks-slot-children="ST232"
+                class="max-width-large align-center"
+              >
+                <div class="margin-bottom margin-small">
+                  <h2 blocks-name="heading" class="text-align-center">
+                    {event_title}
+                  </h2>
+                </div>
+
+                <p
+                  blocks-name="paragraph"
+                  class="text-size-medium text-align-center"
+                >
+                  {event_sub_title}
+                </p>
+              </div>
+
+              <div
+                id="w-node-ef91d6cb-bb95-2fb4-7bd0-33ca22d1307d-e424d2ab"
+                class="padding-section-medium w-dyn-list"
+              >
+                <div class="para-padding-bottom">
+                  {paragraph}
+                </div>
+                <div
+                  role="list"
+                  class="gallery5_component no-pagination w-dyn-items"
+                >
+                  {
+                    images.map((image, index) => (
+                      <div
+                        key={index}
+                        role="listitem"
+                        class="gallery5_lightbox-link w-dyn-item"
+                      >
+                        <div class="gallery5_image-wrapper">
+                          <img
+                            src={image.src}
+                            loading="lazy"
+                            decoding="async"
+                            alt={image.alt}
+                            class="gallery5_image-2"
+                          />
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  </body>
+</Layout>
+<style>
+  .para-padding-bottom {
+    margin-bottom: 5vw;
+  }
+</style>
