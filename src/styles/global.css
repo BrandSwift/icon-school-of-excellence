@@ -9078,7 +9078,7 @@ figcaption {
 }
 
 .slide-2 {
-  background-image: url('/assets/images/home/silder-4.webp');
+  background-image: url('/assets/images/home/slider.JPG');
   background-position: 0 0;
   background-size: cover;
 }
@@ -14879,9 +14879,9 @@ figcaption {
     background-image: url('/assets/images/home/silder-4-2.webp');
   }
 
-  .slide-5 {
+  /* .slide-5 {
     background-image: url('/assets/images/home/slider-5-2.webp');
-  }
+  } */
 
   .gallery5_component {
     grid-template-columns: 1fr;
