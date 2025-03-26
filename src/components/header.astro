@@ -5,21 +5,21 @@
 <div class="admission-scrolling">
   <marquee behavior="" direction=""
     ><a href="/contact"
-      >Admissions open for Nursery to Grade 9 for the 2025-26 Academic year
+      >Admission open for Nursery to Grade 12 for the 2025-26 Academic year
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admissions
-      open for Nursery to Grade 9 for the 2025-26 Academic year
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admission
+      open for Nursery to Grade 12 for the 2025-26 Academic year
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admissions
-      open for Nursery to Grade 9 for the 2025-26 Academic year
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admission
+      open for Nursery to Grade 12 for the 2025-26 Academic year
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admissions
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admission
       open for Nursery to Grade 9 for the 2025-26 Academic year</a
     ></marquee
   >
@@ -224,26 +224,28 @@
 </div>
 
 <script>
-  document.querySelectorAll('.navbar1_link').forEach((link) => {
+  document.querySelectorAll(".navbar1_link").forEach((link) => {
     if (link.pathname === window.location.pathname) {
-      link.classList.add('active');
+      link.classList.add("active");
     }
   });
 </script>
 
 <script>
-  let lastScroll = window.scrollY;
-  const navbar = document.querySelector('.navbar1_component');
+  let lastScroll = document.documentElement.scrollTop || window.scrollY;
+  const navbar = document.querySelector(".navbar1_component");
 
-  window.addEventListener('scroll', () => {
-    if (lastScroll < window.scrollY) {
-      navbar.classList.remove('header-visible');
-      navbar.classList.add('header-hidden');
+  window.addEventListener("scroll", () => {
+    let currentScroll = document.documentElement.scrollTop || window.scrollY;
+
+    if (currentScroll > lastScroll) {
+      navbar.classList.remove("header-visible");
+      navbar.classList.add("header-hidden");
     } else {
-      navbar.classList.remove('header-hidden');
-      navbar.classList.add('header-visible');
+      navbar.classList.remove("header-hidden");
+      navbar.classList.add("header-visible");
     }
-    lastScroll = window.scrollY;
+    lastScroll = currentScroll;
   });
 </script>
 

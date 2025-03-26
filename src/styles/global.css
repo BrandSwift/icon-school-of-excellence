@@ -3728,6 +3728,11 @@ figcaption {
   font-size: 0.875rem;
 }
 
+.text-size-small a {
+  text-decoration: none;
+  color: #e31e26;
+}
+
 .icon-text-size {
   font-size: 1.5rem;
 }
