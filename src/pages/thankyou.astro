@@ -49,25 +49,36 @@ import Layout from "../layouts/Layout.astro";
                             alt="icon-school-of-excellence-extra-curricular-activities-page"
                         />
                         <p
-                            style="font-size: 35px; font-weight: 600; font-family: Poppins, sans-serif; padding-bottom: 20px; color: #e31e26;;"
+                            style="font-size: 35px; font-weight: 600; font-family: Poppins, sans-serif; padding-bottom: 20px; color: #e31e26;"
                         >
                             Thank you for submitting your details!
                         </p>
                         <p
-                            style="font-size: 22px; ont-family: Poppins, sans-serif;"
+                            style="font-size: 22px; font-family: Poppins, sans-serif;"
                         >
                             We will review your submission shortly!
                         </p>
+                        <p>
+                            <strong>Name :</strong>
+                            <span id="thank-name"></span>
+                        </p>
+
+                        <p>
+                            <strong>Email :</strong>
+                            <span id="thank-email"></span>
+                        </p>
+                        <p>
+                            <strong>Phone:</strong>
+                            <span id="thank-phone"></span>
+                        </p>
+                        <p>
+                            <strong>Message:</strong>
+                            <span id="thank-message"></span>
+                        </p>
+
                         <div class="margin-top margin-medium">
-                            <div
-                                blocks-slot-children="ST232"
-                                blocks-name="button-group"
-                                class="button-group"
-                            >
-                                <a
-                                    blocks-name="button-2"
-                                    href="/"
-                                    class="button is-secondary w-button"
+                            <div class="button-group">
+                                <a href="/" class="button is-secondary w-button"
                                     >Go Home</a
                                 >
                             </div>
@@ -94,6 +105,30 @@ import Layout from "../layouts/Layout.astro";
             </main>
         </div>
     </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const formData = JSON.parse(sessionStorage.getItem("formData"));
+            if (formData) {
+                document.getElementById("thank-name").textContent =
+                    formData.firstname + " " + formData.lastname;
+
+                document.getElementById("thank-email").textContent =
+                    formData.email;
+
+                document.getElementById("thank-phone").textContent =
+                    formData.phonenumber;
+
+                document.getElementById("thank-message").textContent =
+                    formData.message;
+
+                sessionStorage.removeItem("formData");
+            } else {
+                window.location.href = "/";
+            }
+        });
+    </script>
+
     <style>
         .container-thank {
             display: grid;

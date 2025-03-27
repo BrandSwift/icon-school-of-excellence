@@ -449,6 +449,9 @@ import Footer from "../components/footer.astro";
 
           const formData = new FormData(event.target);
           const data = Object.fromEntries(formData.entries());
+
+          sessionStorage.setItem("formData", JSON.stringify(data));
+
           var templateParams = {
             firstname: data.firstname,
             lastname: data.lastname,
