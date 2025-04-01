@@ -2217,6 +2217,13 @@ textarea.w-select {
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   display: grid;
+  margin: 0 40px;
+}
+.w-layout-grid img {
+
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow:0px 0px 3px;
 }
 
 .w-form-formrecaptcha {
@@ -3156,11 +3163,24 @@ figcaption {
 }
 
 .heading-style-h1 {
+  margin-top: 20px;
   text-align: left;
   font-size: 3.5rem;
   font-weight: 700;
   line-height: 1.2;
+  position: relative;
+  transition: 1s;
 }
+.heading-style-h1::after{
+  content: '';
+  width: 30%;
+  height: 3px;
+  position: absolute;
+  left: 0;
+ bottom: -1px;
+  background-color: #000;
+}
+
 
 .form_checkbox-icon {
   border: 1px solid var(--border-color--border-primary);
@@ -11717,6 +11737,7 @@ figcaption {
 
   .heading-style-h1 {
     font-size: 3.25rem;
+    
   }
 
   .button.sticky {
@@ -13347,6 +13368,7 @@ figcaption {
 
   .heading-style-h1 {
     font-size: 2.5rem;
+    transition: 1s;
   }
 
   .button.sticky {
@@ -16307,10 +16329,12 @@ figcaption {
   font-display: swap;
 }
 
-.home-admissionh2 {
+.home-admission h2 {
+  
   color: #e31e26;
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 30px;
 }
 
 @font-face {
@@ -16375,12 +16399,16 @@ figcaption {
 }
 
 .life-title {
+ 
   text-align: center;
   color: #e31e26;
   padding-top: 50px;
   background-color: #f7e4d9;
 }
-
+.life-title h2 {
+  padding: 30px;
+}
+   
 .compassion {
   font-size: 2rem;
 }
