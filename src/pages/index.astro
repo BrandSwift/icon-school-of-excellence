@@ -455,12 +455,12 @@ import Footer from "../components/footer.astro";
           </div>
         </section>
 
-        <section class="lap-admission">
-          <h2 class="admission-title">Admission</h2>
-          <div class="home-admission">
-            <div class="home-admission-list text-section">
+        <section>
+          <div class="evoltion-container">
+            <div class="evoltion-text-section">
+              <h2>Admission</h2>
               <div>
-                <p>Enrol Today at ICON School of Excellence</p>
+                <p>Enrol Today at ICON School of Excellence</p><br />
 
                 <p>
                   At ICON School of Excellence, we are committed towards
@@ -471,13 +471,13 @@ import Footer from "../components/footer.astro";
                   excellence. We emphasize the development of not only academic
                   abilities but also emotional strength, physical fitness, and a
                   robust sense of community.
-                </p>
+                </p><br />
 
                 <p>
                   Classes for the upcoming academic year will commence in the
                   first week of June. We warmly invite you to visit us to
                   discover more about our vision and programs.
-                </p>
+                </p><br />
 
                 <p>
                   Embark on this exciting journey of holistic growth and
@@ -485,55 +485,13 @@ import Footer from "../components/footer.astro";
                 </p>
               </div>
             </div>
-            <div class="home-admission-list image-section">
+            <div class="evoltion-image-section">
               <img
-                src="/assets/images/home/admission-students.webp"
-                alt="icon-school-of-excellence-admission-open"
+                src="/assets/images/home/admission.webp"
+                alt="icon-school-of-excellence-our-evoluation"
                 loading="lazy"
                 decoding="async"
               />
-            </div>
-          </div>
-        </section>
-
-        <section class="mob-admission">
-          <h2 class="admission-title">Admission</h2>
-          <div class="home-admission">
-            <div class="home-admission-list text-section">
-              <div>
-                <p>Enrol Today at ICON School of Excellence</p>
-
-                <p>
-                  At ICON School of Excellence, we are committed towards
-                  cultivating the leaders of tomorrow through a comprehensive
-                  educational approach. Our dedicated team of qualified
-                  educators and exceptional facilities foster a nurturing
-                  environment for each child to develop an environment of
-                  excellence. We emphasize the development of not only academic
-                  abilities but also emotional strength, physical fitness, and a
-                  robust sense of community.
-                </p>
-              </div>
-              <div class="home-admission-list image-section">
-                <img
-                  src="/assets/images/home/admission-students.webp"
-                  alt="icon-school-of-excellence-admission-open"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div>
-                <p>
-                  Classes for the upcoming academic year will commence in the
-                  first week of June. We warmly invite you to visit us to
-                  discover more about our vision and programs.
-                </p>
-
-                <p>
-                  Embark on this exciting journey of holistic growth and
-                  exploration of your child with us!
-                </p>
-              </div>
             </div>
           </div>
         </section>
@@ -652,11 +610,9 @@ import Footer from "../components/footer.astro";
         </section>
 
         <section>
-          <div class="schoo-awards">
-          <h2 class="home-admissionh2">School Awards</h2>
-        </div>
-          <div class="home-admission">
-            <div class="home-admission-list text-section">
+          <div class="evoltion-container">
+            <div class="evoltion-text-section">
+              <h2>School Awards</h2>
               <div>
                 <p>
                   Accredited as one of the premier schools in Electronic City,
@@ -670,23 +626,30 @@ import Footer from "../components/footer.astro";
                 </p>
               </div>
             </div>
-            <!-- <div class="home-admission-list image-section">
+            <div class="evoltion-image-section">
               <img
-                src="/assets/images/home/awards.JPG"
-                alt="icon-school-of-excellence-admission-open"
+                src="/assets/images/home/awards.webp"
+                alt="icon-school-of-excellence-our-evoluation"
                 loading="lazy"
                 decoding="async"
               />
-            </div> -->
+            </div>
           </div>
         </section>
 
         <section>
-          <div class="ACCREDITATIONS">
-          <h2 class="home-admissionh2">Accreditations</h2>
-        </div>
-          <div class="home-admission">
-            <div class="home-admission-list text-section">
+          <div class="evoltion-container-acc">
+            <div class="evoltion-image-section-top">
+              <img
+                src="/assets/images/about/evolution.webp"
+                alt="icon-school-of-excellence-our-evoluation"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="evoltion-text-section">
+              <h2>Accreditations</h2>
               <div>
                 <p>
                   ICON School of Excellence is accredited by the Council for the
@@ -699,13 +662,20 @@ import Footer from "../components/footer.astro";
                 </p>
               </div>
             </div>
+
+            <div class="evoltion-image-section-bottom">
+              <img
+                src="/assets/images/about/evolution.webp"
+                alt="icon-school-of-excellence-our-evoluation"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
         </section>
 
         <section class="section_home_leadership">
           <div class="testimonial">
-            <h2>Testimonials</h2>
-
             <button class="arrow left-arrow" onclick="moveSlide(-1)"
               >&#10094;</button
             >
@@ -716,6 +686,7 @@ import Footer from "../components/footer.astro";
 
             <div id="slider">
               <div class="padding-global">
+                <h2>Testimonials</h2>
                 <div class="container-large">
                   <div class="padding-section-medium">
                     <div class="w-layout-grid home_leadership_component">
@@ -1104,22 +1075,16 @@ import Footer from "../components/footer.astro";
           </div>
 
           <style>
-          .schoo-awards h2{
-
-            padding: 20px 0 0 20px;
-          }
-     .ACCREDITATIONS h2{
-
-      padding-left: 20px;
-      padding-top: 20px;
-     }
-           
             .section_home_leadership {
               position: relative;
               overflow: hidden;
               width: 100%;
             }
-
+            .testimonial h2 {
+              color: #e31e26;
+              text-align: center;
+              padding: 20px;
+            }
             #slider {
               display: flex;
               transition: transform 0.5s ease-in-out;
