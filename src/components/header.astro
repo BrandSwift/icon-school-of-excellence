@@ -223,32 +223,6 @@
   </a>
 </div>
 
-<script>
-  document.querySelectorAll(".navbar1_link").forEach((link) => {
-    if (link.pathname === window.location.pathname) {
-      link.classList.add("active");
-    }
-  });
-</script>
-
-<!-- <script>
-  let lastScroll = document.documentElement.scrollTop || window.scrollY;
-  const navbar = document.querySelector(".navbar1_component");
-
-  window.addEventListener("scroll", () => {
-    let currentScroll = document.documentElement.scrollTop || window.scrollY;
-
-    if (currentScroll > lastScroll) {
-      navbar.classList.remove("header-visible");
-      navbar.classList.add("header-hidden");
-    } else {
-      navbar.classList.remove("header-hidden");
-      navbar.classList.add("header-visible");
-    }
-    lastScroll = currentScroll;
-  });
-</script> -->
-
 <style>
   .popup-whatsapp {
     position: fixed;

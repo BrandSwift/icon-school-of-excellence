@@ -4520,6 +4520,11 @@ h3 {
   justify-content: center;
   padding: 2rem 3rem;
   display: flex;
+
+}
+
+.home_leadership_card-content2 {
+
   width: 60vw;
 }
 
@@ -9119,7 +9124,7 @@ h3 {
 }
 
 .slide-2 {
-  background-image: url('/assets/images/home/slider.JPG');
+  background-image: url('/assets/images/home/slider.webp');
   background-position: 0 0;
   background-size: cover;
 }
@@ -16523,11 +16528,11 @@ h3 {
 }
 
 .item:nth-of-type(1) .background-img {
-  background-image: url('/assets/images/life-at-isoe/State-of-the-Art-Infrastructure.JPG');
+  background-image: url('/assets/images/life-at-isoe/State-of-the-Art-Infrastructure.webp');
 }
 
 .item:nth-of-type(2) .background-img {
-  background-image: url('/assets/images/life-at-isoe/Co-Scholastic-Learning.jpeg');
+  background-image: url('/assets/images/life-at-isoe/Co-Scholastic-Learning.webp');
 }
 
 .item:nth-of-type(3) .background-img {
@@ -16539,15 +16544,15 @@ h3 {
 }
 
 .item:nth-of-type(5) .background-img {
-  background-image: url('/assets/images/life-at-isoe/inhouse.JPG');
+  background-image: url('/assets/images/life-at-isoe/inhouse.webp');
 }
 
 .item:nth-of-type(6) .background-img {
-  background-image: url('/assets/images/life-at-isoe/workspace.jpg');
+  background-image: url('/assets/images/life-at-isoe/workspace.webp');
 }
 
 .item:nth-of-type(7) .background-img {
-  background-image: url('/assets/images/life-at-isoe/techno.jpg');
+  background-image: url('/assets/images/life-at-isoe/techno.webp');
 }
 
 .item:nth-of-type(8) .background-img {
