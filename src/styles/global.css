@@ -2575,6 +2575,12 @@ figcaption {
   color: var(--text-color--text-primary);
 }
 
+.main-wrapper h1,
+h2,
+h3 {
+  color: #e31e26;
+}
+
 .container-medium {
   width: 100%;
   max-width: 64rem;
@@ -3180,7 +3186,8 @@ figcaption {
   position: absolute;
   left: 0;
   bottom: -1px;
-  background-color: #000;
+  background-color: "#e31e2";
+
 }
 
 
@@ -3537,7 +3544,7 @@ figcaption {
 
 .text-color-white {
   /* color: var(--base-color-neutral--white); */
-  color: #fff;
+  color: #fff !important;
   font-family: Gt America Standard Trial, sans-serif;
   font-weight: 700;
 }
@@ -3931,8 +3938,8 @@ figcaption {
 .padding-global {
   background-color: #f7e4d9;
   border: 1px none var(--base-color-brand--brown);
-  padding-left: 5%;
-  padding-right: 5%;
+  /* padding-left: 5%;
+  padding-right: 5%; */
   overflow: hidden;
 }
 
@@ -14911,6 +14918,18 @@ figcaption {
 }
 
 @media screen and (max-width: 479px) {
+  .w-layout-grid {
+
+    margin: 0 10px;
+  }
+
+  .padding-global {
+
+    padding-left: 0;
+    padding-right: 0;
+
+  }
+
   .slide-2 {
     background-image: url('/assets/images/home/silder-4-2.webp');
   }
