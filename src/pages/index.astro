@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout
@@ -21,135 +22,8 @@ import Footer from "../components/footer.astro";
     <Header />
     <div class="page-wrapper">
       <main class="main-wrapper">
-        <header class="section_home_hero-header">
-          <div class="padding-global-slider">
-            <div class="container-large">
-              <div class="home_hero-header_component">
-                <div class="padding-section-large">
-                  <div class="home_hero-header_content-wrapper">
-                    <div
-                      blocks-name="header111_content-left"
-                      blocks-slot-children="ST232"
-                      id="w-node-a6530a14-3061-6ab9-bde6-e9bc3ac0889e-e424d249"
-                      class="home_hero-header_content-left"
-                    >
-                      <div
-                        data-delay="4000"
-                        data-animation="outin"
-                        class="slider w-slider"
-                        data-autoplay="true"
-                        data-easing="ease-in-out"
-                        data-hide-arrows="true"
-                        data-disable-swipe="true"
-                        data-autoplay-limit="0"
-                        data-nav-spacing="3"
-                        data-duration="500"
-                        data-infinite="true"
-                      >
-                        <div>
-                          <div class="w-slide">
-                            <h1
-                              id="changing-text"
-                              blocks-name="heading"
-                              class="text-color-white changing-text hero-text-centred"
-                            >
-                              Creating <br />Role Models
-                            </h1>
-                          </div>
-                        </div>
+        <Hero />
 
-                        <div class="slide-nav-2 w-slider-nav w-round w-num">
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      blocks-name="header111_content-right"
-                      blocks-slot-children="ST232"
-                    >
-                      <div>
-                        <p
-                          blocks-name="paragraph"
-                          class="text-size-medium text-color-white"
-                        >
-                          <strong
-                            >ICON School of Excellence comprises of a dedicated
-                            team that is passionately committed to enhancing the
-                            quality of education in Bangalore. This founding
-                            group is composed of professionals from a rich
-                            tapestry of fields, including medicine, management,
-                            academia, and psychology. Each member brings unique
-                            insights and experiences, fostering a collaborative
-                            spirit that enriches the learning environment.</strong
-                          ><br />‍
-                        </p>
-                        <div
-                          id="w-node-_18c36d89-0140-6c51-6a64-0f36cbd20219-e424d249"
-                          class="rich-text-block w-richtext"
-                        >
-                          <p>
-                            <strong
-                              >Together, we create an inspiring atmosphere where
-                              creativity and critical thinking flourish. This
-                              diverse team understands the complexities of
-                              education and the importance of holistic
-                              development, ensuring that every child is nurtured
-                              academically, socially, and emotionally.</strong
-                            >
-                          </p>
-                        </div>
-                      </div>
-                      <div class="margin-top margin-medium">
-                        <div
-                          blocks-slot-children="ST232"
-                          blocks-name="button-group"
-                          class="button-group"
-                        >
-                          <a
-                            blocks-name="button"
-                            href="/admissions"
-                            class="button w-button">Admissions</a
-                          ><a
-                            blocks-name="button-2"
-                            href="/about"
-                            class="button is-secondary w-button">About ICON</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="home_hero-header_background-image-wrapper">
-            <div class="image-overlay-layer"></div>
-            <div
-              data-delay="4000"
-              data-animation="slide"
-              class="home_hero-header_background-image w-slider"
-              data-autoplay="true"
-              data-easing="ease"
-              data-hide-arrows="false"
-              data-disable-swipe="false"
-              data-autoplay-limit="0"
-              data-nav-spacing="3"
-              data-duration="500"
-              data-infinite="true"
-            >
-              <div class="w-slider-mask">
-                <div class="slide-2 w-slide"></div>
-                <div class="slide w-slide"></div>
-                <div class="slide-3 w-slide"></div>
-                <div class="slide-4 w-slide"></div>
-                <div class="slide-5 w-slide"></div>
-                <div class="slide-6 w-slide"></div>
-              </div>
-              <div class="w-slider-arrow-left"></div>
-              <div class="w-slider-arrow-right"></div>
-              <div class="slide-nav w-slider-nav w-round w-num"></div>
-            </div>
-          </div>
-        </header>
         <header class="section_header82">
           <div class="header82_component">
             <div class="padding-global">
@@ -189,6 +63,7 @@ import Footer from "../components/footer.astro";
             </div>
           </div>
         </header>
+
         <header class="section_home_showreel">
           <div class="home_showreel_component">
             <div class="padding-global">
@@ -1188,7 +1063,7 @@ import Footer from "../components/footer.astro";
             }
           </style>
 
-          <script client:load>
+          <script is:inline>
             document.addEventListener("DOMContentLoaded", function () {
               let currentIndex = 0;
               const slides = document.querySelectorAll(".padding-global");

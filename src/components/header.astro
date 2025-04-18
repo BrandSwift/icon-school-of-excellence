@@ -224,6 +224,72 @@
 </div>
 
 <style>
+  .navbar7_dropdown-list {
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100vw;
+    background-color: #fff;
+    z-index: 999;
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Show on hover */
+  .navbar7_menu-dropdown:hover .navbar7_dropdown-list {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* === Inner Container Layout === */
+  .navbar7_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  /* Each column */
+  .navbar7_dropdown-content-left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar7_dropdown-link-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar7_dropdown-link-list h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e31e26;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.3rem;
+  }
+
+  .navbar7_dropdown-link {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    padding: 0.3rem 0;
+    transition: color 0.2s;
+  }
+
+  .navbar7_dropdown-link:hover {
+    color: #007bff;
+  }
+
   .popup-whatsapp {
     position: fixed;
     bottom: 20%;

@@ -1,0 +1,164 @@
+---
+
+---
+
+<header class="section_home_hero-header">
+    <div class="padding-global-slider">
+        <div class="container-large">
+            <div class="home_hero-header_component">
+                <div class="padding-section-large">
+                    <div class="home_hero-header_content-wrapper">
+                        <!-- Left Content -->
+                        <div class="home_hero-header_content-left">
+                            <div class="slider">
+                                <div class="w-slide">
+                                    <h1
+                                        id="changing-text"
+                                        class="text-color-white changing-text hero-text-centred"
+                                    >
+                                        Creating <br />Role Models
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Content -->
+                        <div class="home_hero-header_content-right">
+                            <div>
+                                <p class="text-size-medium text-color-white">
+                                    <strong>
+                                        ICON School of Excellence comprises of a
+                                        dedicated team that is passionately
+                                        committed to enhancing the quality of
+                                        education in Bangalore. This founding
+                                        group is composed of professionals from
+                                        a rich tapestry of fields, including
+                                        medicine, management, academia, and
+                                        psychology. Each member brings unique
+                                        insights and experiences, fostering a
+                                        collaborative spirit that enriches the
+                                        learning environment.
+                                    </strong>
+                                </p>
+                                <br />
+                                <div class="rich-text-block w-richtext">
+                                    <p>
+                                        <strong>
+                                            ‍ Together, we create an inspiring
+                                            atmosphere where creativity and
+                                            critical thinking flourish. This
+                                            diverse team understands the
+                                            complexities of education and the
+                                            importance of holistic development,
+                                            ensuring that every child is
+                                            nurtured academically, socially, and
+                                            emotionally.
+                                        </strong>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="margin-top margin-medium">
+                                <div class="button-group">
+                                    <a
+                                        href="/admissions"
+                                        class="button w-button">Admissions</a
+                                    >
+                                    <a
+                                        href="/about"
+                                        class="button is-secondary w-button"
+                                        >About ICON</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image Slider -->
+    <div class="home_hero-header_background-image-wrapper">
+        <div class="image-overlay-layer"></div>
+        <div class="carousel-wrapper">
+            <div class="carousel-track" id="carouselTrack">
+                <img
+                    src="/assets/images/home/slider.webp"
+                    class="carousel-image"
+                />
+                <img
+                    src="/assets/images/facilities/language-laboratory.webp"
+                    class="carousel-image"
+                />
+                <img
+                    src="/assets/images/home/slider-4.webp"
+                    class="carousel-image"
+                />
+                <img
+                    src="/assets/images/academics/skate.webp"
+                    class="carousel-image"
+                />
+                <img
+                    src="/assets/images/home/slider-6.webp"
+                    class="carousel-image"
+                />
+                <img
+                    src="/assets/images/home/slider-7.webp"
+                    class="carousel-image"
+                />
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    .carousel-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .carousel-track {
+        display: flex;
+        height: 100%;
+        transition: transform 1s ease-in-out;
+        will-change: transform;
+    }
+
+    .carousel-image {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .image-overlay-layer {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        z-index: 1;
+    }
+</style>
+
+<script type="module" is:inline>
+    const track = document.getElementById("carouselTrack");
+    const images = track.children;
+    const totalSlides = images.length;
+
+    let index = 0;
+
+    function slideNext() {
+        index++;
+        if (index >= totalSlides) {
+            index = 0;
+        }
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(slideNext, 3000);
+</script>

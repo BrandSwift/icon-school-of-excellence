@@ -20,6 +20,7 @@ import Footer from "../components/footer.astro";
   <body>
     <div class="page-wrapper">
       <Header />
+
       <main class="main-wrapper">
         <header class="section_about-us_header-section-vision">
           <div class="w-layout-grid about-us_header-section-vision_component">
@@ -75,11 +76,13 @@ import Footer from "../components/footer.astro";
             </div>
           </div>
         </header>
+
         <section class="section_layout350">
           <div class="padding-global-2 background-image">
             <div class="container-large-2">
               <div class="padding-section">
                 <div class="w-layout-grid layout350_component">
+
                   <div
                     id="sticky-tab-container"
                     class="layout350_tabs-menu-2 w-node-_2d790f51-e46b-61e1-7349-fe38e1fd65dd-e424d2c7"
@@ -121,6 +124,7 @@ import Footer from "../components/footer.astro";
                       <div>Music Room</div>
                     </a>
                   </div>
+                  
                   <div
                     id="w-node-_2d790f51-e46b-61e1-7349-fe38e1fd65dc-e424d2c7"
                     class="layout350_content-wrapper"
@@ -174,30 +178,31 @@ import Footer from "../components/footer.astro";
                           class="layout402_tabs-menu no-scrollbar w-tab-menu"
                         >
                           <a
-                            data-w-tab="Tab 1"
+                            href="#physics-lab"
                             class="layout350_tab-link w-inline-block w-tab-link w--current"
                           >
                             <div>Physics Lab</div>
                           </a>
                           <a
-                            data-w-tab="Tab 2"
+                            href="#chemistry-lab"
                             class="layout350_tab-link w-inline-block w-tab-link"
                           >
                             <div>Chemistry Lab</div>
                           </a>
                           <a
-                            data-w-tab="Tab 3"
+                            href="#biology-lab"
                             class="layout350_tab-link w-inline-block w-tab-link"
                           >
                             <div>Biology Lab</div>
                           </a>
                           <a
-                            data-w-tab="Tab 4"
+                            href="#computer-lab"
                             class="layout350_tab-link w-inline-block w-tab-link"
                           >
                             <div>Computer/Language Lab</div>
-                          </a><a
-                            data-w-tab="Tab 5"
+                          </a>
+                          <a
+                            href="#math-lab"
                             class="layout350_tab-link w-inline-block w-tab-link"
                           >
                             <div>Mathematics Lab</div>
@@ -205,7 +210,7 @@ import Footer from "../components/footer.astro";
                         </div>
                         <div class="layout402_tabs-content w-tab-content">
                           <div
-                            data-w-tab="Tab 1"
+                            id="physics-lab"
                             class="w-tab-pane w--tab-active"
                           >
                             <div class="layout402_tab-wrapper">
@@ -247,7 +252,7 @@ import Footer from "../components/footer.astro";
                             </div>
                           </div>
                           <div
-                            data-w-tab="Tab 2"
+                            id="chemistry-lab"
                             class="layout402_tab-pane w-tab-pane"
                           >
                             <div class="layout402_tab-wrapper">
@@ -287,7 +292,7 @@ import Footer from "../components/footer.astro";
                               </div>
                             </div>
                           </div>
-                          <div data-w-tab="Tab 3" class="w-tab-pane">
+                          <div id="biology-lab" class="w-tab-pane">
                             <div class="layout402_tab-wrapper">
                               <div class="layout402_content">
                                 <div class="margin-bottom margin-small">
@@ -327,7 +332,7 @@ import Footer from "../components/footer.astro";
                               </div>
                             </div>
                           </div>
-                          <div data-w-tab="Tab 4" class="w-tab-pane">
+                          <div id="computer-lab" class="w-tab-pane">
                             <div class="layout402_tab-wrapper">
                               <div class="layout402_content">
                                 <div class="margin-bottom margin-small">
@@ -359,7 +364,7 @@ import Footer from "../components/footer.astro";
                             </div>
                           </div>
                           <div
-                            data-w-tab="Tab 5"
+                            id="math-lab"
                             class="layout402_tab-pane w-tab-pane"
                           >
                             <div class="layout402_tab-wrapper">
@@ -577,8 +582,11 @@ import Footer from "../components/footer.astro";
             </div>
           </div>
         </section>
+        
       </main>
+
       <Footer />
     </div>
+    <script src="/src/scripts/lab-tabs.js"></script>
   </body>
 </Layout>
