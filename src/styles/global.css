@@ -8147,7 +8147,7 @@ h3 {
 
 .section_header50 {
   position: relative;
-  background-image: url('/assets/images/contact-us.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/contact-us.jpg?updatedAt=1745998929307');
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
@@ -9947,7 +9947,7 @@ h3 {
 
 .section_layout180 {
   position: relative;
-  background-image: url('/assets/images/about/vision.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/about/vision.webp?updatedAt=1745912253820');
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
@@ -23536,7 +23536,7 @@ h3 {
 
 .section_header50 {
   position: relative;
-  background-image: url('/assets/images/contact-us.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/contact-us.jpg?updatedAt=1745998929307');
   background-repeat: no-repeat;
   background-size: cover;
   height: 400px;
@@ -25334,13 +25334,6 @@ h3 {
   inset: 0%;
 }
 
-.section_layout180 {
-  position: relative;
-  background-image: url('/assets/images/about/vision.webp');
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-}
 
 .layout180_background-image-wrapper {
   z-index: -1;
@@ -30639,39 +30632,39 @@ h3 {
 }
 
 .item:nth-of-type(1) .background-img {
-  background-image: url('/assets/images/life-at-isoe/State-of-the-Art-Infrastructure.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/State-of-the-Art-Infrastructure.webp?updatedAt=1745912088152');
 }
 
 .item:nth-of-type(2) .background-img {
-  background-image: url('/assets/images/life-at-isoe/Co-Scholastic-Learning.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/Co-Scholastic-Learning.webp?updatedAt=1745912079049');
 }
 
 .item:nth-of-type(3) .background-img {
-  background-image: url('/assets/images/life-at-isoe/field-trip.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/field-trip.webp?updatedAt=1745912083285');
 }
 
 .item:nth-of-type(4) .background-img {
-  background-image: url('/assets/images/life-at-isoe/healthcare.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/healthcare.jpg?updatedAt=1745912083108');
 }
 
 .item:nth-of-type(5) .background-img {
-  background-image: url('/assets/images/life-at-isoe/inhouse.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/inhouse.webp?updatedAt=1745912083558');
 }
 
 .item:nth-of-type(6) .background-img {
-  background-image: url('/assets/images/life-at-isoe/workspace.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/workspace.webp?updatedAt=1745912087816');
 }
 
 .item:nth-of-type(7) .background-img {
-  background-image: url('/assets/images/life-at-isoe/techno.webp');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/techno.webp?updatedAt=1745912087969');
 }
 
 .item:nth-of-type(8) .background-img {
-  background-image: url('/assets/images/life-at-isoe/multy-learning.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/multy-learning.jpg?updatedAt=1745912086727');
 }
 
 .item:nth-of-type(9) .background-img {
-  background-image: url('/assets/images/life-at-isoe/parents.JPG');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/life-at-isoe/parents.JPG?updatedAt=1745912086070');
 }
 
 .overlay {
@@ -30795,15 +30788,15 @@ tr:nth-child(even) {
 }
 
 .life-at-list:nth-of-type(1) {
-  background-image: url('/assets/images/home/teaching-career.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/home/teaching-career.jpg?updatedAt=1745912102340');
 }
 
 .life-at-list:nth-of-type(2) {
-  background-image: url('/assets/images/home/library.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/home/library.jpg?updatedAt=1745912098633');
 }
 
 .life-at-list:nth-of-type(3) {
-  background-image: url('/assets/images/home/smartclassroom.jpg');
+  background-image: url('https://ik.imagekit.io/brandswift/isoe/assets/images/home/smartclassroom.jpg?updatedAt=1745912102082');
 }
 
 .life-at-list::before {
