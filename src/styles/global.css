@@ -1622,6 +1622,7 @@ figcaption {
 h2,
 h3 {
   color: #e31e26;
+  padding-top: 50px;
 }
 
 .container-medium {
@@ -18665,7 +18666,7 @@ h3 {
 }
 
 .navbar1_component {
-  z-index: 9999999;
+  z-index: 9998;
   border-bottom: 1px none var(--border-color--border-primary);
   background-color: #ef8084;
   align-items: center;

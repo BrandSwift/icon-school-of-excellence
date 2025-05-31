@@ -20,6 +20,20 @@ import IntroVideo from "../components/intro-video.astro";
   canonical="https://iconschoolofexcellence.com"
 >
   <body>
+    <!-- ------popup------- -->
+
+    <div id="popup-banner" class="popup-banner hidden">
+      <div class="popup-content">
+        <button id="close-btn-popup" class="close-btn-popup">&times;</button>
+        <img
+          src="https://ik.imagekit.io/brandswift/isoe/assets/images/home/BANNER%20ICON%205.webp?updatedAt=1746692077346"
+          alt="Popup Banner"
+          loading="lazy"
+        />
+      </div>
+    </div>
+    <!-- ------popup------- -->
+
     <Header />
     <div class="page-wrapper">
       <main class="main-wrapper">
@@ -940,7 +954,74 @@ import IntroVideo from "../components/intro-video.astro";
             </div>
           </div>
 
+          <!-- ------popup------- -->
+
+          <script is:inline>
+            window.addEventListener("DOMContentLoaded", () => {
+              const popup = document.getElementById("popup-banner");
+              const closeBtn = document.getElementById("close-btn-popup");
+
+              // Show the popup after a slight delay
+              setTimeout(() => {
+                popup.classList.remove("hidden");
+              }, 500); // Optional delay
+
+              closeBtn.addEventListener("click", () => {
+                popup.classList.add("hidden");
+              });
+            });
+          </script>
+
+          <!-- ------popup------- -->
+
           <style>
+            /* -------popup------- */
+
+            .popup-banner {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100vh;
+              background: rgba(0, 0, 0, 0.7);
+              z-index: 9999;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .popup-banner.hidden {
+              display: none;
+            }
+
+            .popup-content {
+              position: relative;
+              max-width: 600px;
+              width: 80%;
+              background: #fff;
+              padding: 10px;
+              border-radius: 10px;
+              box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            }
+
+            .popup-content img {
+              width: 100%;
+              border-radius: 10px;
+            }
+
+            .close-btn-popup {
+              position: absolute;
+              top: -30px;
+              right: -30px;
+              font-size: 36px;
+              color: #e31e26;
+              font-weight: bold;
+              background: transparent;
+              border: none;
+              cursor: pointer;
+            }
+            /* ----------popup ---- */
+
             .section_home_leadership {
               position: relative;
               overflow: hidden;

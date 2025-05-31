@@ -347,5 +347,16 @@ import Footer from "../../components/footer.astro";
       </main>
       <Footer />
     </div>
+
+    <style>
+      .text-rich-text {
+        content: "";
+      }
+      @media screen and (max-width: 800px) {
+        .text-rich-text {
+          padding: 0px 40px;
+        }
+      }
+    </style>
   </body>
 </Layout>
