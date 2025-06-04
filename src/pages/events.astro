@@ -767,5 +767,16 @@ import Footer from "../components/footer.astro";
       </main>
     </div>
     <Footer />
+
+    <style>
+      .padding-global {
+        content: "";
+      }
+      @media screen and (max-width: 800px) {
+        .padding-global {
+          padding: 0px 30px;
+        }
+      }
+    </style>
   </body>
 </Layout>
