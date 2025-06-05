@@ -253,7 +253,7 @@
       right: -100%;
       width: 80%;
       height: 100vh;
-      background: white;
+      /* background: white; */
       padding: 2rem;
       transition: 0.3s ease-in-out;
       z-index: 9999;
@@ -267,6 +267,7 @@
     .navbar1_menu.is-active {
       right: 0;
       display: flex;
+      margin-top: 125px;
     }
 
     .navbar1_menu-button {
@@ -275,7 +276,7 @@
       z-index: 10000;
       position: relative;
       width: 30px;
-      height: 20px;
+      height: 24px;
       margin-left: auto;
     }
 
@@ -283,44 +284,37 @@
       width: 100%;
       height: 100%;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .menu-icon1_line-top,
     .menu-icon1_line-middle,
     .menu-icon1_line-bottom {
-      position: absolute;
+      position: relative;
       width: 100%;
       height: 2px;
       background-color: #333;
       transition: all 0.3s ease-in-out;
-      left: 0;
-    }
-
-    .menu-icon1_line-top {
-      top: 0;
     }
 
     .menu-icon1_line-middle {
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .menu-icon1_line-bottom {
-      bottom: 0;
+      width: 80%;
+      margin: 0 auto;
     }
 
     .navbar1_menu-button.is-active .menu-icon1_line-top {
-      transform: rotate(45deg);
-      top: 50%;
+      transform: translateY(11px) rotate(45deg);
     }
 
     .navbar1_menu-button.is-active .menu-icon1_line-middle {
       opacity: 0;
+      transform: translateX(-20px);
     }
 
     .navbar1_menu-button.is-active .menu-icon1_line-bottom {
-      transform: rotate(-45deg);
-      bottom: 50%;
+      transform: translateY(-11px) rotate(-45deg);
     }
 
     .navbar1_menu .navbar1_link {
@@ -347,9 +341,9 @@
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      /* width: 100%; */
       height: 100%;
-      background: rgba(0, 0, 0, 0.5);
+      background: #ef8084;
       z-index: -1;
     }
 
@@ -365,12 +359,15 @@
       transition: all 0.3s ease-in-out;
       background: #f9f9f9;
       margin: 0.5rem 0;
+      max-height: 0;
+      overflow: hidden;
     }
 
     .navbar7_dropdown-list.is-active {
       display: block;
       opacity: 1;
       transform: translateY(0);
+      max-height: 1000px; /* Adjust this value based on your content */
     }
 
     .navbar7_container {
@@ -386,7 +383,7 @@
     .navbar7_dropdown-toggle {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 0.8rem 0;
       border-bottom: 1px solid #eee;
     }
@@ -405,6 +402,22 @@
     .navbar1_container {
       position: relative;
       z-index: 1001;
+    }
+
+    /* Add visual indicator for dropdown toggle */
+    .navbar7_dropdown-toggle::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #333;
+      border-bottom: 2px solid #333;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease;
+      display: none;
+    }
+
+    .navbar7_dropdown-list.is-active + .navbar7_dropdown-toggle::after {
+      transform: rotate(-135deg);
     }
   }
 
@@ -553,6 +566,18 @@
         if (window.innerWidth <= 768) {
           e.preventDefault();
           e.stopPropagation();
+
+          // Close all other dropdowns first
+          dropdownToggles.forEach((otherToggle) => {
+            if (otherToggle !== toggle) {
+              const otherList = otherToggle.nextElementSibling as HTMLElement;
+              if (otherList) {
+                otherList.classList.remove('is-active');
+              }
+            }
+          });
+
+          // Toggle current dropdown
           const dropdownList = toggle.nextElementSibling as HTMLElement;
           if (dropdownList) {
             dropdownList.classList.toggle('is-active');
@@ -571,6 +596,29 @@
         menu.classList.remove('is-active');
         menuButton?.classList.remove('is-active');
         document.body.style.overflow = '';
+
+        // Close all dropdowns when menu is closed
+        const dropdownLists = document.querySelectorAll(
+          '.navbar7_dropdown-list'
+        );
+        dropdownLists.forEach((list) => {
+          list.classList.remove('is-active');
+        });
+      }
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        const target = e.target as HTMLElement;
+        if (!target.closest('.navbar7_menu-dropdown')) {
+          const dropdownLists = document.querySelectorAll(
+            '.navbar7_dropdown-list'
+          );
+          dropdownLists.forEach((list) => {
+            list.classList.remove('is-active');
+          });
+        }
       }
     });
   });

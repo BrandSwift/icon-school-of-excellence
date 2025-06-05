@@ -26144,12 +26144,12 @@ h3 {
     font-size: 1.125rem;
   }
 
-  .menu-icon_line-middle-inner {
+  /* .menu-icon_line-middle-inner {
     width: 4px;
     height: 0;
     padding-bottom: 0;
     padding-right: 0;
-  }
+  } */
 
   .home_hero-header_content-wrapper {
     grid-template-columns: 1fr;
