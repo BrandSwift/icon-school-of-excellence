@@ -160,27 +160,6 @@ const {
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
-    <style is:global>
-      /* Mobile Menu Base Styles */
-      @media screen and (max-width: 768px) {
-        .navbar1_menu {
-          display: none;
-        }
-
-        .navbar1_menu.is-active {
-          display: flex;
-        }
-
-        .navbar1_menu-button {
-          display: block !important;
-        }
-
-        .navbar1_link {
-          opacity: 1 !important;
-          visibility: visible !important;
-        }
-      }
-    </style>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -254,6 +233,19 @@ const {
           .hide,
           .hide-tablet {
             display: none !important;
+          }
+          .navbar1_menu {
+            display: flex !important;
+          }
+
+          .navbar1_menu.mobile-menu-active {
+            display: flex !important;
+          }
+
+          .navbar1_link {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
           }
         }
 
@@ -383,7 +375,7 @@ const {
   }
   html {
     font-family: system-ui, sans-serif;
-    background: #13151a;
+    background: #fff;
   }
   code {
     font-family:
@@ -395,5 +387,22 @@ const {
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
+  }
+
+  /* Ensure mobile menu is visible */
+  @media screen and (max-width: 991px) {
+    .navbar1_menu {
+      display: flex !important;
+    }
+
+    .navbar1_menu.mobile-menu-active {
+      display: flex !important;
+    }
+
+    .navbar1_link {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
   }
 </style>
