@@ -3240,6 +3240,8 @@ h3 {
   position: static;
 }
 
+
+
 .navbar1_container {
   justify-content: space-between;
   align-items: center;
@@ -3277,7 +3279,7 @@ h3 {
 .navbar1_component {
   z-index: 9999999;
   border-bottom: 1px none var(--border-color--border-primary);
-  background-color: #ef8084;
+  background-color: #ff0008;
   align-items: center;
   width: 100%;
   height: auto;
@@ -3285,6 +3287,7 @@ h3 {
   padding-left: 5%;
   padding-right: 5%;
   display: flex;
+
   position: sticky;
   top: 0;
 }
@@ -18679,6 +18682,8 @@ h3 {
   position: sticky;
   top: 0;
 }
+
+
 
 .navbar1_logo-link {
   padding-left: 0;
