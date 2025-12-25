@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Investiture%20Ceremony/Untitled-1%20(1).jpg?updatedAt=1751623710501",
+        alt: "icon-school-of-excellence-Investiture Ceremony-1",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Investiture%20Ceremony/Untitled-3%20(1).jpg?updatedAt=1751623710452",
+        alt: "icon-school-of-excellence-Investiture Ceremony-2",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Investiture%20Ceremony/Untitled-4%20(1).jpg?updatedAt=1751623710389",
+        alt: "icon-school-of-excellence-Investiture Ceremony-3",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Investiture%20Ceremony/Untitled-5.jpg?updatedAt=1751623710239",
+        alt: "icon-school-of-excellence-Investiture Ceremony-4",
+    },
+];
+---
+
+<Layout
+    title="Investiture Ceremony | Icon School of Excellence"
+    description="Icon School of Excellence celebrates International Yoga Day with sessions to promote wellness and mindfulness among students in Bangalore"
+    keywords="Yoga Day Bangalore, school wellness programs, yoga sessions, Icon School activities"
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/events/Investiture-Ceremony"
+>
+    <EventsList
+        event_title="Investiture Ceremony"
+        event_sub_title="Explore the latest photos from our Investiture Ceremony celebration at ISOE"
+        images={images}
+    />
+</Layout>

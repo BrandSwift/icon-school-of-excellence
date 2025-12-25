@@ -1,7 +1,3 @@
----
-
----
-
 <header class="section_home_hero-header">
     <div class="padding-global-slider">
         <div class="container-large">
@@ -24,51 +20,40 @@
 
                         <!-- Right Content -->
                         <div class="home_hero-header_content-right">
-                            <div>
+                            <div class="text-block">
                                 <p class="text-size-medium text-color-white">
-                                    <strong>
-                                        ICON School of Excellence comprises of a
-                                        dedicated team that is passionately
-                                        committed to enhancing the quality of
-                                        education in Bangalore. This founding
-                                        group is composed of professionals from
-                                        a rich tapestry of fields, including
-                                        medicine, management, academia, and
-                                        psychology. Each member brings unique
-                                        insights and experiences, fostering a
-                                        collaborative spirit that enriches the
-                                        learning environment.
-                                    </strong>
+                                    ICON School of Excellence comprises of a
+                                    dedicated team that is passionately
+                                    committed to enhancing the quality of
+                                    education in Bangalore. This founding group
+                                    is composed of professionals from a rich
+                                    tapestry of fields, including medicine,
+                                    management, academia, and psychology. Each
+                                    member brings unique insights and
+                                    experiences, fostering a collaborative
+                                    spirit that enriches the learning
+                                    environment.
                                 </p>
-                                <br />
-                                <div class="rich-text-block w-richtext">
-                                    <p>
-                                        <strong>
-                                            ‍ Together, we create an inspiring
-                                            atmosphere where creativity and
-                                            critical thinking flourish. This
-                                            diverse team understands the
-                                            complexities of education and the
-                                            importance of holistic development,
-                                            ensuring that every child is
-                                            nurtured academically, socially, and
-                                            emotionally.
-                                        </strong>
-                                    </p>
-                                </div>
+                                <p class="text-size-medium text-color-white">
+                                    Together, we create an inspiring atmosphere
+                                    where creativity and critical thinking
+                                    flourish. This diverse team understands the
+                                    complexities of education and the importance
+                                    of development, ensuring that every child is
+                                    nurtured academically, socially, and
+                                    emotionally.
+                                </p>
                             </div>
-                            <div class="margin-top margin-medium">
-                                <div class="button-group">
-                                    <a
-                                        href="/admissions"
-                                        class="button w-button">Admissions</a
-                                    >
-                                    <a
-                                        href="/about"
-                                        class="button is-secondary w-button"
-                                        >About ICON</a
-                                    >
-                                </div>
+
+                            <div class="button-group">
+                                <a href="/admissions" class="button w-button"
+                                    >Admissions</a
+                                >
+                                <a
+                                    href="/about"
+                                    class="button is-secondary w-button"
+                                    >About ICON</a
+                                >
                             </div>
                         </div>
                     </div>
@@ -77,93 +62,189 @@
         </div>
     </div>
 
-    <!-- Background Image Slider -->
+    <!-- Video Background -->
     <div class="home_hero-header_background-image-wrapper">
         <div class="image-overlay-layer"></div>
         <div class="carousel-wrapper">
-            <div class="carousel-track" id="carouselTrack">
-                <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/home/slider.webp?updatedAt=1745912101789"
-                    class="carousel-image"
-                    loading="lazy"
-                />
-                <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/facilities/language-laboratory.webp?updatedAt=1745912108085"
-                    class="carousel-image"
-                    loading="lazy"
-                />
-                <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/home/slider-4.webp?updatedAt=1745912100292"
-                    class="carousel-image"
-                    loading="lazy"
-                />
-                <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/academics/skate.webp?updatedAt=1745912243078"
-                    class="carousel-image"
-                    loading="lazy"
-                />
-                <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/home/slider-6.webp?updatedAt=1745912100302"
-                    class="carousel-image"
-                    loading="lazy"
-                />
-                <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/home/slider-7.webp?updatedAt=1745912100478"
-                    class="carousel-image"
-                />
+            <div class="home-video">
+                <div class="responsive-iframe-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/jBu9KLtOI8U?autoplay=1&mute=1&loop=1&playlist=jBu9KLtOI8U&controls=0&rel=0&playsinline=1"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="autoplay; encrypted-media; fullscreen"
+                        allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
 </header>
 
 <style>
-    .carousel-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
+    .section_home_hero-header {
+        position: relative;
         width: 100%;
+        height: 100vh;
         overflow: hidden;
-        z-index: 0;
     }
 
-    .carousel-track {
+    /* Layout */
+    .home_hero-header_content-wrapper {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 2;
+        position: relative;
         height: 100%;
-        transition: transform 1s ease-in-out;
-        will-change: transform;
     }
 
-    .carousel-image {
-        flex-shrink: 0;
+    .home_hero-header_content-left,
+    .home_hero-header_content-right {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .hero-text-centred {
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .text-color-white {
+        color: #fff;
+    }
+
+    .text-size-medium {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    /* Right content fix */
+    .home_hero-header_content-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .home_hero-header_content-right .text-block {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Buttons */
+    .button-group {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .button {
+        background: #e21d24;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .button.is-secondary {
+        background: transparent;
+        border: 2px solid #fff;
+    }
+
+    /* Video full cover */
+    .home-video {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        z-index: 0;
+        overflow: hidden;
     }
 
+    .responsive-iframe-wrapper {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .responsive-iframe-wrapper iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: 56.25vw; /* 16:9 ratio */
+        min-height: 100%;
+        min-width: 177.77vh; /* 16:9 ratio */
+        transform: translate(-50%, -50%);
+    }
+
+    /* Overlay */
     .image-overlay-layer {
         position: absolute;
         inset: 0;
         background-color: rgba(0, 0, 0, 0.4);
-
         z-index: 1;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+        .home_hero-header_content-wrapper {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .home_hero-header_content-left,
+        .home_hero-header_content-right {
+            padding: 10px;
+        }
+
+        .hero-text-centred {
+            font-size: 2rem;
+        }
+
+        .text-size-medium {
+            font-size: 1rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .home_hero-header_content-right {
+            align-items: center;
+        }
+
+        .home_hero-header_content-right .text-block {
+            max-width: 100%;
+        }
+
+        .button-group {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button-group .button {
+            margin: 5px;
+        }
     }
 </style>
 
-<script type="module" is:inline>
-    const track = document.getElementById("carouselTrack");
-    const images = track.children;
-    const totalSlides = images.length;
-
-    let index = 0;
-
-    function slideNext() {
-        index++;
-        if (index >= totalSlides) {
-            index = 0;
-        }
-        track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    setInterval(slideNext, 3000);
+<script>
+    // Optional heading text changer
+    const changingText = document.getElementById("changing-text");
+    const textArray = [
+        "Creating Role Models",
+        "Inspiring Young Minds",
+        "Shaping the Future",
+    ];
+    let textIndex = 0;
+    setInterval(() => {
+        textIndex = (textIndex + 1) % textArray.length;
+        changingText.innerHTML = textArray[textIndex].replace(" ", "<br/>");
+    }, 3000);
 </script>

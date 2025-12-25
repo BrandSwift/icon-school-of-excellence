@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Yoga%20Day-kindergarten/img3%20(1).jpg?updatedAt=1751626990421",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-1",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Yoga%20Day-kindergarten/icon-2%20(1)%20(1)%20(1).jpg?updatedAt=1751625150821",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-2",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Yoga%20Day-kindergarten/icon-4%20(1)%20(1)%20(1).jpg?updatedAt=1751625150838",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-3",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Yoga%20Day-kindergarten/icon-5%20(1)%20(1)%20(1).jpg?updatedAt=1751625150879",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-4",
+    },
+    {
+        src: "https://ik.imagekit.io/brandswift/isoe/assets/images/events/Yoga%20Day-kindergarten/img%202%20(1).jpg?updatedAt=1751627093314",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-5",
+    },
+];
+---
+
+<Layout
+    title="Yoga Day-kindergarten | Icon School of Excellence"
+    description="Icon School of Excellence celebrates International Yoga Day with sessions to promote wellness and mindfulness among students in Bangalore"
+    keywords="Yoga Day Bangalore, school wellness programs, yoga sessions, Icon School activities"
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/events/Yoga-Day-kindergarten"
+>
+    <EventsList
+        event_title="Yoga Day -kindergarten"
+        event_sub_title="Explore the latest photos from our Yoga Day celebration at ISOE"
+        images={images}
+    />
+</Layout>

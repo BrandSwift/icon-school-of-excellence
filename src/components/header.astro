@@ -2,7 +2,7 @@
 
 ---
 
-<div class="admission-scrolling">
+<!-- <div class="admission-scrolling">
   <marquee behavior="" direction=""
     ><a href="/contact"
       >Admission open for Nursery to Grade 12 for the 2025-26 Academic year
@@ -20,10 +20,10 @@
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admission
-      open for Nursery to Grade 9 for the 2025-26 Academic year</a
+      open for Nursery to Grade 12 for the 2025-26 Academic year</a
     ></marquee
   >
-</div>
+</div> -->
 <div
   data-collapse="medium"
   data-animation="default"
@@ -231,6 +231,11 @@
 </div>
 
 <style>
+  @media screen and (max-width: 768px) {
+    .navbar1_link i {
+      display: none;
+    }
+  }
   .navbar7_dropdown-list {
     position: absolute;
     top: 90%;
@@ -252,7 +257,7 @@
       top: 0;
       right: -100%;
       width: 80%;
-      height: 100vh;
+      /* height: 100vh; */
       /* background: white; */
       padding: 2rem;
       transition: 0.3s ease-in-out;
@@ -337,7 +342,7 @@
 
     /* Add overlay when menu is active */
     .navbar1_menu.is-active::before {
-      content: '';
+      content: "";
       position: fixed;
       top: 0;
       left: 0;
@@ -406,7 +411,7 @@
 
     /* Add visual indicator for dropdown toggle */
     .navbar7_dropdown-toggle::after {
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       border-right: 2px solid #333;
@@ -533,9 +538,9 @@
     width: 700;
   }
   @media screen and (max-width: 768px) {
-    .admission-scrolling {
+    /* .admission-scrolling {
       display: none;
-    }
+    } */
     .popup-whatsapp {
       display: none;
     }
@@ -544,25 +549,25 @@
 
 <script>
   // Mobile menu functionality
-  document.addEventListener('DOMContentLoaded', () => {
-    const menuButton = document.querySelector('.navbar1_menu-button');
-    const menu = document.querySelector('.navbar1_menu');
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".navbar1_menu-button");
+    const menu = document.querySelector(".navbar1_menu");
     const dropdownToggles = document.querySelectorAll(
-      '.navbar7_dropdown-toggle'
+      ".navbar7_dropdown-toggle",
     );
 
-    menuButton?.addEventListener('click', (e) => {
+    menuButton?.addEventListener("click", (e) => {
       e.stopPropagation();
-      menuButton.classList.toggle('is-active');
-      menu?.classList.toggle('is-active');
-      document.body.style.overflow = menu?.classList.contains('is-active')
-        ? 'hidden'
-        : '';
+      menuButton.classList.toggle("is-active");
+      menu?.classList.toggle("is-active");
+      document.body.style.overflow = menu?.classList.contains("is-active")
+        ? "hidden"
+        : "";
     });
 
     // Handle dropdowns on mobile
     dropdownToggles.forEach((toggle) => {
-      toggle.addEventListener('click', (e) => {
+      toggle.addEventListener("click", (e) => {
         if (window.innerWidth <= 768) {
           e.preventDefault();
           e.stopPropagation();
@@ -572,7 +577,7 @@
             if (otherToggle !== toggle) {
               const otherList = otherToggle.nextElementSibling as HTMLElement;
               if (otherList) {
-                otherList.classList.remove('is-active');
+                otherList.classList.remove("is-active");
               }
             }
           });
@@ -580,43 +585,43 @@
           // Toggle current dropdown
           const dropdownList = toggle.nextElementSibling as HTMLElement;
           if (dropdownList) {
-            dropdownList.classList.toggle('is-active');
+            dropdownList.classList.toggle("is-active");
           }
         }
       });
     });
 
     // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       if (
-        menu?.classList.contains('is-active') &&
+        menu?.classList.contains("is-active") &&
         !menu.contains(e.target as Node) &&
         !menuButton?.contains(e.target as Node)
       ) {
-        menu.classList.remove('is-active');
-        menuButton?.classList.remove('is-active');
-        document.body.style.overflow = '';
+        menu.classList.remove("is-active");
+        menuButton?.classList.remove("is-active");
+        document.body.style.overflow = "";
 
         // Close all dropdowns when menu is closed
         const dropdownLists = document.querySelectorAll(
-          '.navbar7_dropdown-list'
+          ".navbar7_dropdown-list",
         );
         dropdownLists.forEach((list) => {
-          list.classList.remove('is-active');
+          list.classList.remove("is-active");
         });
       }
     });
 
     // Close dropdowns when clicking outside
-    document.addEventListener('click', (e) => {
+    document.addEventListener("click", (e) => {
       if (window.innerWidth <= 768) {
         const target = e.target as HTMLElement;
-        if (!target.closest('.navbar7_menu-dropdown')) {
+        if (!target.closest(".navbar7_menu-dropdown")) {
           const dropdownLists = document.querySelectorAll(
-            '.navbar7_dropdown-list'
+            ".navbar7_dropdown-list",
           );
           dropdownLists.forEach((list) => {
-            list.classList.remove('is-active');
+            list.classList.remove("is-active");
           });
         }
       }
