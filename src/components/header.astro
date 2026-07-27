@@ -233,11 +233,31 @@
   </div>
 </div>
 
+<!-- ----------whatsapp and textbox start------------- -->
+
+<!-- <div class="popup-whatsapp">
+  <a href="https://api.whatsapp.com/send?phone=918431006918" target="_blank">
+    <img src="/assets/images/WhatsApp.svg" alt="whatsapp" />
+  </a>
+</div> -->
+
+<!-- WhatsApp Button -->
 <div class="popup-whatsapp">
   <a href="https://api.whatsapp.com/send?phone=918431006918" target="_blank">
     <img src="/assets/images/WhatsApp.svg" alt="whatsapp" />
   </a>
 </div>
+
+<!-- jQuery -->
+<script is:inline src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- MCB Chatbot -->
+<script
+  is:inline
+  src="https://mcbchatbot.myclassboard.com/js/mcbchatbotloader.js"
+  mcbbotid="9A3A450F-A542-4263-8183-3F1826ACE825"></script>
+
+<!-- ----------whatsapp and textbox end------------- -->
 
 <style>
   @media screen and (max-width: 768px) {
@@ -496,15 +516,44 @@
     color: #007bff;
   }
 
-  .popup-whatsapp {
+  /* .popup-whatsapp {
     position: fixed;
     bottom: 20%;
     right: 20px;
     width: 5%;
     z-index: 10000;
     animation: whatsapp-bounce 2s infinite ease-in-out;
+  } */
+
+  .popup-whatsapp {
+    position: fixed;
+    bottom: 160px; /* push it higher */
+    right: 20px;
+    width: 60px;
+    z-index: 9999;
+    animation: whatsapp-bounce 2s infinite ease-in-out;
   }
+
+  .popup-whatsapp img {
+    width: 100%;
+    height: auto;
+  }
+
   @keyframes whatsapp-bounce {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+  }
+
+ 
+
+  /* @keyframes whatsapp-bounce {
     0%,
     100% {
       transform: scale(1);
@@ -513,7 +562,7 @@
     50% {
       transform: scale(0.5);
       opacity: 0.65;
-    }
+    } */
   }
   .text-color {
     color: #e72023;
@@ -554,9 +603,19 @@
       display: none;
     }
   }
+  /* Fix chatbot click issue */
+  
+  /* 🔥 FORCE CHATBOT ABOVE EVERYTHING */
+  iframe[src*="mcbchatbot"],
+  div[id*="mcb"],
+  div[class*="mcb"] {
+    z-index: 999999999 !important;
+    position: fixed !important;
+    pointer-events: auto !important;
+  }
 </style>
 
-<script>
+<!-- <script>
   // Mobile menu functionality
   document.addEventListener("DOMContentLoaded", () => {
     const menuButton = document.querySelector(".navbar1_menu-button");
@@ -635,5 +694,92 @@
         }
       }
     });
+  });
+</script> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector(".navbar1_menu-button");
+    const menu = document.querySelector(".navbar1_menu");
+    const dropdownToggles = document.querySelectorAll(
+      ".navbar7_dropdown-toggle",
+    );
+
+    // 🔹 Toggle mobile menu
+    menuButton?.addEventListener("click", (e) => {
+      e.stopPropagation();
+      menuButton.classList.toggle("is-active");
+      menu?.classList.toggle("is-active");
+
+      document.body.style.overflow = menu?.classList.contains("is-active")
+        ? "hidden"
+        : "";
+    });
+
+    // 🔹 Dropdown toggle (mobile)
+    dropdownToggles.forEach((toggle) => {
+      toggle.addEventListener("click", (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Close other dropdowns
+          dropdownToggles.forEach((otherToggle) => {
+            if (otherToggle !== toggle) {
+              const otherList = otherToggle.nextElementSibling;
+              if (otherList) {
+                otherList.classList.remove("is-active");
+              }
+            }
+          });
+
+          // Toggle current dropdown
+          const dropdownList = toggle.nextElementSibling;
+          if (dropdownList) {
+            dropdownList.classList.toggle("is-active");
+          }
+        }
+      });
+    });
+
+    // 🔹 SAFE CLICK HANDLING (NO CHATBOT CONFLICT)
+    document.addEventListener("click", (e) => {
+      const target = e.target;
+
+      // ✅ Close menu only if clicking OUTSIDE navbar
+      if (
+        menu?.classList.contains("is-active") &&
+        !target.closest(".navbar1_component")
+      ) {
+        menu.classList.remove("is-active");
+        menuButton?.classList.remove("is-active");
+        document.body.style.overflow = "";
+      }
+
+      // ✅ Close dropdowns (mobile only)
+      if (window.innerWidth <= 768) {
+        if (!target.closest(".navbar7_menu-dropdown")) {
+          document
+            .querySelectorAll(".navbar7_dropdown-list")
+            .forEach((list) => {
+              list.classList.remove("is-active");
+            });
+        }
+      }
+    });
+  });
+</script>
+
+<script>
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      if (window.MCBChatbot) {
+        try {
+          window.MCBChatbot.init();
+        } catch (e) {
+          console.log("MCB init error:", e);
+        }
+      }
+    }, 2000);
   });
 </script>
