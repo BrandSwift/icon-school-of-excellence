@@ -9,53 +9,73 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
-		<h2>
+	<a href={href} aria-label={title}>
+		<h2 class="link-card-title">
 			{title}
-			<span>&rarr;</span>
+			<span aria-hidden="true">→</span>
 		</h2>
-		<p>
+
+		<p class="link-card-body">
 			{body}
 		</p>
 	</a>
 </li>
+
 <style>
 	.link-card {
 		list-style: none;
 		display: flex;
 		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
 		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
+		background: #23262d;
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+		transition:
+			transform 0.3s ease,
+			box-shadow 0.3s ease;
 	}
-	h2 {
+
+	.link-card a {
+		width: 100%;
+		display: block;
+		padding: 1.5rem;
+		text-decoration: none;
+		border-radius: 8px;
+		background: #23262d;
+		color: #ffffff;
+	}
+
+	.link-card-title {
 		margin: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		line-height: 1.3;
+		transition: color 0.3s ease;
 	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
+
+	.link-card-body {
+		margin: 0.75rem 0 0;
+		line-height: 1.6;
+		color: rgba(255, 255, 255, 0.8);
 	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
+
+	.link-card:hover,
+	.link-card:focus-within {
+		transform: translateY(-3px);
 		background-image: var(--accent-gradient);
+		background-size: 200%;
 	}
-	.link-card:is(:hover, :focus-within) h2 {
+
+	.link-card:hover .link-card-title,
+	.link-card:focus-within .link-card-title {
 		color: rgb(var(--accent-light));
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.link-card,
+		.link-card-title {
+			transition: none;
+		}
 	}
 </style>

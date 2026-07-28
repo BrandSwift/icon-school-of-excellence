@@ -8,7 +8,7 @@ import Footer from "../../components/footer.astro";
   title=" A Parent's Guide to Choosing the Best ICSE Schools in Bangalore"
   description=" Discover the essential factors when choosing the best ICSE schools in Bangalore—your guide to making an informed decision for your child's future."
   keywords="ICSE schools in Bangalore, future of education, holistic learning, ICON School of Excellence, ICSE curriculum, best ICSE schools in Bangalore"
-  og_title="How ICSE Schools in Bangalore Are Shaping the Future of Education"
+  og_title="A Parent's Guide to Choosing the Best ICSE Schools in Bangalore"
   og_description="Explore how ICSE schools in Bangalore are transforming education through innovative teaching methods, a global curriculum, and a focus on holistic development"
   og_image="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-cbse.webp?updatedAt=1745912228352"
   og_url="https://iconschoolofexcellence.com/blogs/icse-cbse"
@@ -37,10 +37,14 @@ import Footer from "../../components/footer.astro";
                   <div class="blog-post3-header_image-wrapper">
                     <img
                       src="https://ik.imagekit.io/brandswift/isoe/assets/images/academics/high-school.webp?updatedAt=1745912234486"
-                      loading="lazy"
-                      alt=""
-                      sizes="(max-width: 991px) 90vw, 47vw"
                       class="blog-post3-header_image"
+                      loading="eager"
+                      fetchpriority="high"
+                      decoding="async"
+                      width="1200"
+                      height="675"
+                      alt="Students learning at ICON School of Excellence Bangalore"
+                      sizes="(max-width: 991px) 90vw, 47vw"
                     />
                   </div>
                 </div>
@@ -250,13 +254,56 @@ import Footer from "../../components/footer.astro";
       <Footer />
     </div>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "A Parent's Guide to Choosing the Best ICSE Schools in Bangalore",
+        "description": "Discover the essential factors when choosing the best ICSE schools in Bangalore.",
+        "author": {
+          "@type": "Organization",
+          "name": "ICON School of Excellence"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "ICON School of Excellence"
+        },
+        "image": "https://ik.imagekit.io/brandswift/isoe/assets/images/academics/high-school.webp",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://iconschoolofexcellence.com/blogs/How-ICSE-Schools-in-Bangalore-Are-Shaping-the-Future-of-Education"
+        }
+      }
+    </script>
+
     <style>
       .text-rich-text {
-        content: "";
+        max-width: 900px;
+        margin: auto;
       }
+
+      .text-rich-text p {
+        line-height: 1.8;
+      }
+
+      .text-rich-text h2 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+
       @media screen and (max-width: 800px) {
         .text-rich-text {
-          padding: 0px 40px;
+          padding: 0 20px;
+        }
+
+        .text-rich-text p,
+        .text-rich-text li {
+          font-size: 16px;
+          line-height: 1.8;
+        }
+
+        .text-rich-text h2 {
+          font-size: 1.5rem;
         }
       }
     </style>

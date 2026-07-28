@@ -18349,7 +18349,7 @@ h3 {
 
 .padding-section {
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 
 .rl-styleguide_empty-box {
@@ -31004,13 +31004,11 @@ tr:nth-child(even) {
 }
 
 .evoltion-image-section IMG,
-.evoltion-image-section-top IMG {
+.evoltion-image-section IMG {
   border-radius: 20px;
 }
 
-.evoltion-image-section-bottom {
-  display: none;
-}
+
 
 @media (max-width: 1024px) {
   .evoltion-container {

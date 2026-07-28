@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+    {
+        src: "/assets/images/events/Republic-day/Republic-day-2.webp",
+        alt: "icon-school-of-excellence-Republic-day-1",
+    },
+    {
+        src: "/assets/images/events/Republic-day/Republic-day-3.webp",
+        alt: "icon-school-of-excellence-Republic-day-2",
+    },
+    {
+        src: "/assets/images/events/Republic-day/Republic-day-4.webp",
+        alt: "icon-school-of-excellence-Republic-day-3",
+    },
+    {
+        src: "/assets/images/events/Republic-day/Republic-day-5.webp",
+        alt: "icon-school-of-excellence-Republic-day-4",
+    },
+    {
+        src: "/assets/images/events/Republic-day/Republic-day-6.webp",
+        alt: "icon-school-of-excellence-Republic-day-5",
+    },
+];
+---
+
+<Layout
+    title="Republic-day| Icon School of Excellence"
+    description="Explore the memorable moments from our Republic Day celebration at ISOE, where students proudly honored our nation through patriotic performances, cultural activities, and the spirit of unity."
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/events/republic-day"
+>
+    <EventsList
+        event_title="Republic Day"
+        event_sub_title="Explore the memorable moments from our Republic Day celebration at ISOE, where students proudly honored our nation through patriotic performances, cultural activities, and the spirit of unity."
+        images={images}
+    />
+</Layout>

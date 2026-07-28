@@ -45,7 +45,7 @@ import Footer from "../../components/footer.astro";
                                         <img
                                             src="https://ik.imagekit.io/brandswift/isoe/assets/images/classes/academic-programme.webp?updatedAt=1745912211911"
                                             loading="eager"
-                                            alt=""
+                                            alt="The Growing Popularity of ICSE Schools in Bangalore"
                                             sizes="(max-width: 991px) 90vw, 47vw"
                                             class="blog-post3-header_image"
                                         />
@@ -211,8 +211,8 @@ import Footer from "../../components/footer.astro";
                                                 </li>
                                                 <li>
                                                     <b>Skill Development -</b> Enhances
-                                                    problem-solving, analytical,
-                                                    and creative thinking skills.
+                                                    problem-solving, analytical, and
+                                                    creative thinking skills.
                                                 </li>
                                                 <li>
                                                     <b
@@ -494,13 +494,36 @@ import Footer from "../../components/footer.astro";
             <Footer />
         </div>
 
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "The Growing Popularity of ICSE Schools in Bangalore",
+                "image": "https://ik.imagekit.io/brandswift/isoe/assets/images/classes/academic-programme.webp",
+                "author": {
+                    "@type": "Organization",
+                    "name": "ICON School of Excellence"
+                },
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "ICON School of Excellence"
+                },
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://iconschoolofexcellence.com/blogs/How-ICSE-Schools-in-Bangalore-Are-Shaping-the-Future-of-Education"
+                }
+            }
+        </script>
+
         <style>
             .text-rich-text {
-                content: "";
+                max-width: 850px;
+                margin: 0 auto;
             }
+
             @media screen and (max-width: 800px) {
                 .text-rich-text {
-                    padding: 0px 40px;
+                    padding: 0 20px;
                 }
             }
         </style>

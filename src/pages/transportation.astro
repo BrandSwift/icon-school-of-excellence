@@ -412,6 +412,59 @@ import Footer from "../components/footer.astro";
         </main>
     </body>
 
+    <section>
+        <h2>Frequently Asked Questions</h2>
+
+        <h3>Does ICON School of Excellence provide school transport?</h3>
+        <p>
+            Yes, we provide safe and reliable transportation services across
+            Electronic City and nearby areas.
+        </p>
+
+        <h3>Are the school buses GPS enabled?</h3>
+        <p>
+            Yes, our buses are equipped with GPS tracking systems for enhanced
+            student safety.
+        </p>
+
+        <h3>Which areas are covered by the school buses?</h3>
+        <p>
+            Our buses cover Electronic City, Neeladri Nagar, Gollahalli,
+            Bettadasanpura, Hosa Road, Huskur, and surrounding localities.
+        </p>
+
+        <h3>Are attendants available on the buses?</h3>
+        <p>
+            Yes, every bus has a trained attendant to assist students and ensure
+            safe travel.
+        </p>
+
+        <h3>How can I check if my area is covered?</h3>
+        <p>
+            You can contact our transport department or admissions team to
+            confirm route availability.
+        </p>
+    </section>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "School",
+            "name": "ICON School of Excellence",
+            "url": "https://iconschoolofexcellence.com",
+            "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "School Transportation Service",
+                "itemListElement": [
+                    {
+                        "@type": "Offer",
+                        "name": "Student Transportation"
+                    }
+                ]
+            }
+        }
+    </script>
+
     <Footer />
 </Layout>
 

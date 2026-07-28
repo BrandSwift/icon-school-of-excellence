@@ -23,8 +23,10 @@ import Footer from "../components/footer.astro";
       <a
         href="https://api.whatsapp.com/send?phone=918431006918"
         target="_blank"
-        blocks-name="button-2"
-        class="button sticky1 whatsapp w-button"></a>
+        rel="noopener noreferrer"
+        class="button sticky1 whatsapp w-button"
+      >
+      </a>
 
       <main class="main-wrapper">
         <header id="vision" class="section_about-us_header-section-vision">
@@ -32,7 +34,7 @@ import Footer from "../components/footer.astro";
             <div class="w-layout-grid">
               <div class="about-us_header-section-vision_image-wrapper">
                 <img
-                  src="https://ik.imagekit.io/brandswift/isoe/assets/images/about/icon%20school.JPG?updatedAt=1754390045264"
+                  src="/assets/images/about us.webp"
                   loading="lazy"
                   decoding="async"
                   sizes="(max-width: 991px) 100vw, 50vw"
@@ -290,14 +292,17 @@ import Footer from "../components/footer.astro";
                         id="w-node-_21448920-677f-9776-bf60-48b7d6596dc6-e424d2a8"
                         class="w-richtext"
                       >
-                        We are committed to ensure that your children develops
-                        holistically. We understand that each child is unique,
-                        therefore we channelize our efforts in teaching children
-                        using methods that they learn best. We focus on making
-                        your child intellectually vibrant, emotionally mature
-                        and socially skillful. We at ICON School of Excellence
-                        are dedicated to build leadership skills in your child
-                        so he/she can act as catalyst in their field of choice.
+                        <p>
+                          We are committed to ensure that your children develops
+                          holistically. We understand that each child is unique,
+                          therefore we channelize our efforts in teaching
+                          children using methods that they learn best. We focus
+                          on making your child intellectually vibrant,
+                          emotionally mature and socially skillful. We at ICON
+                          School of Excellence are dedicated to build leadership
+                          skills in your child so he/she can act as catalyst in
+                          their field of choice.
+                        </p>
                       </div>
                       <div
                         id="w-node-_99b25823-a2ce-4bc2-0294-619a753289cd-e424d2a8"
@@ -336,15 +341,17 @@ import Footer from "../components/footer.astro";
                         id="w-node-_21448920-677f-9776-bf60-48b7d6596dc6-e424d2a8"
                         class="w-richtext"
                       >
-                        We cherish your child just as much as you do. We believe
-                        in building on their strengths and chiseling them into
-                        individuals who are positive and vibrant. We envision
-                        that your child develops skills of collaboration, yet
-                        retaining competitive spirit to excel. We believe in
-                        laying the foundation so strong that your child is
-                        anchored safely and finds encouragement to explore the
-                        world and its opportunities for a better and glorious
-                        life.
+                        <p>
+                          We cherish your child just as much as you do. We
+                          believe in building on their strengths and chiseling
+                          them into individuals who are positive and vibrant. We
+                          envision that your child develops skills of
+                          collaboration, yet retaining competitive spirit to
+                          excel. We believe in laying the foundation so strong
+                          that your child is anchored safely and finds
+                          encouragement to explore the world and its
+                          opportunities for a better and glorious life.
+                        </p>
                       </div>
                       <div
                         id="w-node-_99b25823-a2ce-4bc2-0294-619a753289cd-e424d2a8"
@@ -416,18 +423,20 @@ import Footer from "../components/footer.astro";
                         id="w-node-_21448920-677f-9776-bf60-48b7d6596dc6-e424d2a8"
                         class="w-richtext"
                       >
-                        It is said that ‘Excellence is the gradual result of
-                        always striving to do better’. This is our motto at the
-                        ‘Internal Quality Assurance Cell’ (IQAC) of ICON SCHOOL
-                        OF EXCELLENCE. We are continuously looking for
-                        improvising our processes to ensure that your child
-                        receives nothing but the very best of education. We use
-                        tri-partite approach to improvise and excel in our
-                        processes: We train management, faculty and parents,
-                        along with children. We are committed to providing your
-                        child the best of teaching-learning experience,
-                        infrastructure, and ambience which will ensure that your
-                        child’s potential is actualized.
+                        <p>
+                          It is said that ‘Excellence is the gradual result of
+                          always striving to do better’. This is our motto at
+                          the ‘Internal Quality Assurance Cell’ (IQAC) of ICON
+                          SCHOOL OF EXCELLENCE. We are continuously looking for
+                          improvising our processes to ensure that your child
+                          receives nothing but the very best of education. We
+                          use tri-partite approach to improvise and excel in our
+                          processes: We train management, faculty and parents,
+                          along with children. We are committed to providing
+                          your child the best of teaching-learning experience,
+                          infrastructure, and ambience which will ensure that
+                          your child’s potential is actualized.
+                        </p>
                       </div>
                       <div
                         id="w-node-_99b25823-a2ce-4bc2-0294-619a753289cd-e424d2a8"
@@ -716,13 +725,13 @@ import Footer from "../components/footer.astro";
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        padding: 60px 0;
         background-color: #f0f0f0;
       }
 
       .list-container {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 20px;
         width: 90%;
         max-width: 1200px;

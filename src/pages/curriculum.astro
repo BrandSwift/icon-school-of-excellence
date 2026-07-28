@@ -31,7 +31,7 @@ import Footer from "../components/footer.astro";
             >
               <div>
                 <h1 blocks-name="heading" class="heading-style-h1">
-                  Our Curriculum
+                  ISOE Student Profile
                 </h1>
               </div>
               <p blocks-name="paragraph" class="text-size-medium">
@@ -64,10 +64,12 @@ import Footer from "../components/footer.astro";
             <div class="academics-thecbs-edge_header_image-wrapper">
               <img
                 src="https://ik.imagekit.io/brandswift/isoe/assets/images/academics/Primary-Curriculam.webp?updatedAt=1745912240337"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
-                sizes="(max-width: 991px) 100vw, 50vw"
-                alt="icon-school-of-excellence-primary-curriculam"
+                width="900"
+                height="600"
+                alt="ICON School of Excellence Primary Curriculum"
                 class="academics-thecbs-edge_header_image"
               />
             </div>
@@ -121,10 +123,10 @@ import Footer from "../components/footer.astro";
                             class="program-image-link w-inline-block w--current"
                             ><img
                               src="https://ik.imagekit.io/brandswift/isoe/assets/images/academics/Kindergarten-Curriculum.webp?updatedAt=1745912235690"
-                              loading="lazy"
-                              decoding="async"
+                              loading="eager"
+                              fetchpriority="high"
                               sizes="(max-width: 767px) 90vw, 43vw"
-                              alt="icon-school-of-excellence-kindergarten-curriculum"
+                              alt="Kindergarten Curriculum at ICON School of Excellence"
                               class="home_academic-programs_image"
                             /></a
                           >
@@ -168,7 +170,6 @@ import Footer from "../components/footer.astro";
                         >
                           <a
                             href="/academics"
-                            aria-current="page"
                             class="program-image-link w-inline-block w--current"
                             ><img
                               src="https://ik.imagekit.io/brandswift/isoe/assets/images/academics/Lower-Primary.webp?updatedAt=1745912236750"
@@ -314,15 +315,17 @@ import Footer from "../components/footer.astro";
       </main>
     </div>
     <Footer />
-    <!-- <style>
-      .main-wrapper {
-        content: "";
+    <style>
+      .home_academic-programs_item {
+        content-visibility: auto;
+        contain-intrinsic-size: 600px;
       }
-      @media screen and (max-width: 800px) {
-        .main-wrapper {
-          padding: 0px 20px;
-        }
+
+      .academics-thecbs-edge_header_image,
+      .home_academic-programs_image {
+        aspect-ratio: 3/2;
+        object-fit: cover;
       }
-    </style> -->
+    </style>
   </body>
 </Layout>

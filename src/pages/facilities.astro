@@ -27,10 +27,10 @@ import Footer from "../components/footer.astro";
             <div class="about-us_header-section-vision_image-wrapper">
               <img
                 src="https://ik.imagekit.io/brandswift/isoe/assets/images/icon-school-of-excellence.webp?updatedAt=1745999666482"
-                loading="lazy"
+                loading="eager"
+                fetchpriority="high"
                 decoding="async"
-                sizes="(max-width: 991px) 100vw, 50vw"
-                alt="icon-school-of-excellence-facilities"
+                alt="Icon School of Excellence Facilities"
                 class="about-us_header-section-vision_image"
               />
             </div>
@@ -495,7 +495,7 @@ import Footer from "../components/footer.astro";
                         </p>
                         <div class="layout350_mobile-image-wrapper">
                           <img
-                            src="https://ik.imagekit.io/brandswift/isoe/assets/images/facilities/sports.webp?updatedAt=1745912120707"
+                            src="/assets/images/sports.webp"
                             loading="lazy"
                             decoding="async"
                             sizes="(max-width: 767px) 90vw, (max-width: 991px) 57vw, 33vw"
@@ -505,6 +505,97 @@ import Footer from "../components/footer.astro";
                         </div>
                       </div>
                     </div>
+
+                    <div
+                      id="Sports"
+                      data-w-id="8e5defba-c5d9-0c92-8352-6fc23299fb9d"
+                      class="layout350_content"
+                    >
+                      <div class="margin-bottom margin-small">
+                        <h2>Kabaddi</h2>
+                      </div>
+                      <div class="text-item-holder">
+                        <p class="text-size-medium-2">
+                          Kabaddi builds quick thinking under pressure a single
+                          breath-held raid demands strategy, timing, and
+                          split-second decisions. Beyond fitness and agility,
+                          students learn to read opponents, coordinate as a
+                          team, and stay composed when a match turns in seconds,
+                          sharpening both body and mind.<br />‍
+                        </p>
+                        <div class="layout350_mobile-image-wrapper">
+                          <img
+                            src="/assets/images/kabbadi.webp"
+                            loading="lazy"
+                            decoding="async"
+                            sizes="(max-width: 767px) 90vw, (max-width: 991px) 57vw, 33vw"
+                            alt="icon-school-of-excellence-sports"
+                            class="layout350_mobile-image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="Sports"
+                      data-w-id="8e5defba-c5d9-0c92-8352-6fc23299fb9d"
+                      class="layout350_content"
+                    >
+                      <div class="margin-bottom margin-small">
+                        <h2>Volleyball</h2>
+                      </div>
+                      <div class="text-item-holder">
+                        <p class="text-size-medium-2">
+                          A missed call in volleyball can cost the point
+                          instantly, so students learn to communicate
+                          constantly, anticipate teammates, and adjust position
+                          without hesitation. Every dropped ball becomes a
+                          lesson in resilience a cue to reset, refocus, and
+                          return the next serve with focus. <br />‍
+                        </p>
+                        <div class="layout350_mobile-image-wrapper">
+                          <img
+                            src="/assets/images/volleyball.webp"
+                            loading="lazy"
+                            decoding="async"
+                            sizes="(max-width: 767px) 90vw, (max-width: 991px) 57vw, 33vw"
+                            alt="icon-school-of-excellence-sports"
+                            class="layout350_mobile-image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      id="Sports"
+                      data-w-id="8e5defba-c5d9-0c92-8352-6fc23299fb9d"
+                      class="layout350_content"
+                    >
+                      <div class="margin-bottom margin-small">
+                        <h2>Chess</h2>
+                      </div>
+                      <div class="text-item-holder">
+                        <p class="text-size-medium-2">
+                          Every chess move carries a consequence, weighed
+                          against what an opponent might do next a discipline
+                          that builds patience and foresight rarely required
+                          elsewhere in a school day. Students learn to sit with
+                          a problem, weigh several solutions, and commit with
+                          calm confidence.<br />‍
+                        </p>
+                        <div class="layout350_mobile-image-wrapper">
+                          <img
+                            src="/assets/images/chess.webp"
+                            loading="lazy"
+                            decoding="async"
+                            sizes="(max-width: 767px) 90vw, (max-width: 991px) 57vw, 33vw"
+                            alt="icon-school-of-excellence-sports"
+                            class="layout350_mobile-image"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
                     <div
                       id="Auditorium"
                       data-w-id="8e5defba-c5d9-0c92-8352-6fc23299fb9d"
@@ -585,6 +676,14 @@ import Footer from "../components/footer.astro";
 
       <Footer />
     </div>
-    <script src="/src/scripts/lab-tabs.js"></script>
+    <script src="/src/scripts/lab-tabs.js" defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const stickyTabs = document.getElementById("sticky-tab-container");
+
+        if (!stickyTabs) return;
+
+        // existing code
+      });
+    </script>
   </body>
 </Layout>

@@ -37,7 +37,7 @@
   <div class="navbar1_container">
     <a href="/" aria-current="page" style="padding: 1rem;">
       <img
-        width="250px"
+        width="300px"
         sizes="123.99304962158203px"
         alt="ISOE-logo"
         src="https://ik.imagekit.io/brandswift/isoe/assets/images/icon.webp?updatedAt=1745912075237"
@@ -197,11 +197,11 @@
         blocks-name="navbar1_link-2"
         class="navbar1_link w-nav-link">Events</a
       >
-      <a
+      <!-- <a
         href="/purchase-book"
         blocks-name="navbar1_link-2"
         class="navbar1_link w-nav-link">Purchase Book</a
-      >
+      > -->
       <a
         href="/contact"
         blocks-name="navbar1_link-3"
@@ -613,173 +613,177 @@
     position: fixed !important;
     pointer-events: auto !important;
   }
+
+  .chatbox-container {
+  z-index: 999999999 !important;
+  display: block !important;
+  transition: all 0.3s ease;
+}
 </style>
 
-<!-- <script>
-  // Mobile menu functionality
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.querySelector(".navbar1_menu-button");
-    const menu = document.querySelector(".navbar1_menu");
-    const dropdownToggles = document.querySelectorAll(
-      ".navbar7_dropdown-toggle",
-    );
 
-    menuButton?.addEventListener("click", (e) => {
-      e.stopPropagation();
-      menuButton.classList.toggle("is-active");
-      menu?.classList.toggle("is-active");
-      document.body.style.overflow = menu?.classList.contains("is-active")
-        ? "hidden"
-        : "";
-    });
 
-    // Handle dropdowns on mobile
-    dropdownToggles.forEach((toggle) => {
-      toggle.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          e.stopPropagation();
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".navbar1_menu-button");
+  const menu = document.querySelector(".navbar1_menu");
+  const dropdownToggles = document.querySelectorAll(".navbar7_dropdown-toggle");
 
-          // Close all other dropdowns first
-          dropdownToggles.forEach((otherToggle) => {
-            if (otherToggle !== toggle) {
-              const otherList = otherToggle.nextElementSibling as HTMLElement;
-              if (otherList) {
-                otherList.classList.remove("is-active");
-              }
+  // 🔹 Mobile menu toggle
+  menuButton?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menuButton.classList.toggle("is-active");
+    menu?.classList.toggle("is-active");
+
+    document.body.style.overflow =
+      menu?.classList.contains("is-active") ? "hidden" : "";
+  });
+
+  // 🔹 Dropdown toggle (mobile)
+  dropdownToggles.forEach((toggle) => {
+    toggle.addEventListener("click", (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        dropdownToggles.forEach((otherToggle) => {
+          if (otherToggle !== toggle) {
+            const otherList = otherToggle.nextElementSibling;
+            if (otherList) {
+              otherList.classList.remove("is-active");
             }
-          });
-
-          // Toggle current dropdown
-          const dropdownList = toggle.nextElementSibling as HTMLElement;
-          if (dropdownList) {
-            dropdownList.classList.toggle("is-active");
           }
+        });
+
+        const dropdownList = toggle.nextElementSibling;
+        if (dropdownList) {
+          dropdownList.classList.toggle("is-active");
         }
-      });
+      }
     });
+  });
 
-    // Close menu when clicking outside
-    document.addEventListener("click", (e) => {
-      if (
-        menu?.classList.contains("is-active") &&
-        !menu.contains(e.target as Node) &&
-        !menuButton?.contains(e.target as Node)
-      ) {
-        menu.classList.remove("is-active");
-        menuButton?.classList.remove("is-active");
-        document.body.style.overflow = "";
+  // ✅ GLOBAL CLICK FIX (VERY IMPORTANT)
+  document.addEventListener("click", (e) => {
+    const target = e.target;
 
-        // Close all dropdowns when menu is closed
-        const dropdownLists = document.querySelectorAll(
-          ".navbar7_dropdown-list",
-        );
-        dropdownLists.forEach((list) => {
+    // 🚨 IGNORE chatbot completely
+    if (
+      target.closest(".chaticon") ||
+      target.closest(".chatbox-container") ||
+      target.closest('iframe[src*="mcbchatbot"]')
+    ) {
+      return;
+    }
+
+    // Close menu
+    if (
+      menu?.classList.contains("is-active") &&
+      !target.closest(".navbar1_component")
+    ) {
+      menu.classList.remove("is-active");
+      menuButton?.classList.remove("is-active");
+      document.body.style.overflow = "";
+    }
+
+    // Close dropdowns (mobile)
+    if (window.innerWidth <= 768) {
+      if (!target.closest(".navbar7_menu-dropdown")) {
+        document.querySelectorAll(".navbar7_dropdown-list").forEach((list) => {
           list.classList.remove("is-active");
         });
       }
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        const target = e.target as HTMLElement;
-        if (!target.closest(".navbar7_menu-dropdown")) {
-          const dropdownLists = document.querySelectorAll(
-            ".navbar7_dropdown-list",
-          );
-          dropdownLists.forEach((list) => {
-            list.classList.remove("is-active");
-          });
-        }
-      }
-    });
+    }
   });
-</script> -->
+});
+</script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.querySelector(".navbar1_menu-button");
-    const menu = document.querySelector(".navbar1_menu");
-    const dropdownToggles = document.querySelectorAll(
-      ".navbar7_dropdown-toggle",
-    );
+window.addEventListener("load", function () {
+  setTimeout(function () {
 
-    // 🔹 Toggle mobile menu
-    menuButton?.addEventListener("click", (e) => {
+    const chatIcon = document.querySelector(".chaticon");
+    const chatBox = document.querySelector(".chatbox-container");
+
+    if (!chatIcon || !chatBox) {
+      console.log("❌ Chatbot elements not found");
+      return;
+    }
+
+    console.log("✅ Chatbot fix applied");
+
+    // 🚨 STOP close event propagation
+    chatIcon.addEventListener("click", function (e) {
+      e.stopImmediatePropagation();
+    });
+
+    chatBox.addEventListener("click", function (e) {
+      e.stopImmediatePropagation();
+    });
+
+    // 🔥 Prevent MCB auto-close
+    const observer = new MutationObserver(() => {
+      if (chatBox.classList.contains("hide")) {
+        chatBox.classList.remove("hide");
+      }
+    });
+
+    observer.observe(chatBox, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+
+  }, 2500);
+});
+</script>
+
+<script>
+window.addEventListener("load", function () {
+  setTimeout(function () {
+
+    const chatIcon = document.querySelector(".chaticon");
+    const chatBox = document.querySelector(".chatbox-container");
+
+    if (!chatIcon || !chatBox) {
+      console.log("Chatbot not found");
+      return;
+    }
+
+    console.log("✅ Chatbox control active");
+
+    // 👉 OPEN
+    chatIcon.addEventListener("click", function (e) {
       e.stopPropagation();
-      menuButton.classList.toggle("is-active");
-      menu?.classList.toggle("is-active");
 
-      document.body.style.overflow = menu?.classList.contains("is-active")
-        ? "hidden"
-        : "";
+      chatBox.style.display = "block";
+      chatBox.classList.remove("hide");
     });
 
-    // 🔹 Dropdown toggle (mobile)
-    dropdownToggles.forEach((toggle) => {
-      toggle.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          e.stopPropagation();
+    // 👉 CLOSE BUTTON (inside chatbot)
+    chatBox.addEventListener("click", function (e) {
+      const closeBtn = e.target.closest(".close, .chat-close, .mcb-close");
 
-          // Close other dropdowns
-          dropdownToggles.forEach((otherToggle) => {
-            if (otherToggle !== toggle) {
-              const otherList = otherToggle.nextElementSibling;
-              if (otherList) {
-                otherList.classList.remove("is-active");
-              }
-            }
-          });
+      if (closeBtn) {
+        chatBox.style.display = "none";
+        chatBox.classList.add("hide");
+      }
 
-          // Toggle current dropdown
-          const dropdownList = toggle.nextElementSibling;
-          if (dropdownList) {
-            dropdownList.classList.toggle("is-active");
-          }
-        }
-      });
+      e.stopPropagation();
     });
 
-    // 🔹 SAFE CLICK HANDLING (NO CHATBOT CONFLICT)
-    document.addEventListener("click", (e) => {
-      const target = e.target;
-
-      // ✅ Close menu only if clicking OUTSIDE navbar
+    // 👉 CLICK OUTSIDE → CLOSE
+    document.addEventListener("click", function (e) {
       if (
-        menu?.classList.contains("is-active") &&
-        !target.closest(".navbar1_component")
+        !e.target.closest(".chatbox-container") &&
+        !e.target.closest(".chaticon")
       ) {
-        menu.classList.remove("is-active");
-        menuButton?.classList.remove("is-active");
-        document.body.style.overflow = "";
-      }
-
-      // ✅ Close dropdowns (mobile only)
-      if (window.innerWidth <= 768) {
-        if (!target.closest(".navbar7_menu-dropdown")) {
-          document
-            .querySelectorAll(".navbar7_dropdown-list")
-            .forEach((list) => {
-              list.classList.remove("is-active");
-            });
-        }
+        chatBox.style.display = "none";
+        chatBox.classList.add("hide");
       }
     });
-  });
-</script>
 
-<script>
-  window.addEventListener("load", function () {
-    setTimeout(function () {
-      if (window.MCBChatbot) {
-        try {
-          window.MCBChatbot.init();
-        } catch (e) {
-          console.log("MCB init error:", e);
-        }
-      }
-    }, 2000);
-  });
-</script>
+  }, 2000);
+});
+</script> 
+
+

@@ -23,7 +23,8 @@
                     src="https://ik.imagekit.io/brandswift/isoe/assets/icon.webp?updatedAt=1745912071537"
                     loading="lazy"
                     width="168"
-                    alt="icon-school-of-excellence-school-logo-footer"
+                    height="168"
+                    alt="Icon School of Excellence Logo"
                   />
                 </a>
                 <div>
@@ -60,7 +61,9 @@
                   <div>
                     <a
                       href=" https://www.youtube.com/@iconschoolofexcellence1696"
-                      target="_blank"><i class="fab fa-youtube"></i></a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-youtube"></i></a
                     >
                   </div>
 
@@ -68,6 +71,7 @@
                     <a
                       href="https://www.facebook.com/Iconschoolofexcellence"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <i class="fab fa-facebook"></i></a
                     >
@@ -76,7 +80,9 @@
                   <div>
                     <a
                       href="https://www.instagram.com/icon_school_of_excellence/"
-                      target="_blank"><i class="fab fa-instagram"></i></a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      ><i class="fab fa-instagram"></i></a
                     >
                   </div>
                 </div>
@@ -89,11 +95,8 @@
                 blocks-slot-children="ST232"
                 class="footer3_link-list"
               >
-                <a
-                  blocks-name="footer3_link"
-                  href="/"
-                  aria-current="page"
-                  class="footer3_link w--current">Home</a
+                <a blocks-name="footer3_link" href="/" class="footer3_link"
+                  >Home</a
                 ><a
                   blocks-name="footer3_link-2"
                   href="/about"
@@ -175,8 +178,8 @@
                 <div>Contact:</div>
                 <div blocks-name="block-4" class="text-size-small">
                   <a href="mailto:management@iconschoolofexcellence.com"
-                    >management@iconschoolofexcellence.com</a
-                  >
+                    >management@iconschoolofexcellence.com
+                  </a>
                 </div>
                 <br />
                 <div blocks-name="block-4" class="text-size-small">
@@ -228,7 +231,9 @@
 <style>
   .footer-logo-part {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: start;
   }
   .footer-contact1 {
     display: flex;
@@ -237,9 +242,7 @@
     align-items: center;
     flex-wrap: wrap;
   }
-  .footer-contact2 {
-    display: none;
-  }
+
   .social-media {
     font-size: 22px;
     display: flex;
@@ -258,13 +261,6 @@
     }
     .footer-contact1 {
       display: none;
-    }
-    .footer-contact2 {
-      display: flex;
-      flex-direction: row;
-      gap: 50px;
-      align-items: center;
-      flex-wrap: wrap;
     }
   }
 </style>

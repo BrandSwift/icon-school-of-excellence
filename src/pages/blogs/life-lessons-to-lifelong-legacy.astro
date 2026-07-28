@@ -45,8 +45,10 @@ import Footer from "../../components/footer.astro";
                                         <img
                                             src="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/Untitled-1.jpg?updatedAt=1748696845888"
                                             loading="eager"
-                                            alt=""
-                                            sizes="(max-width: 991px) 90vw, 47vw"
+                                            fetchpriority="high"
+                                            width="1200"
+                                            height="675"
+                                            alt="Mr Nishanth N Founder Chairman of ICON School of Excellence sharing the vision behind the school"
                                             class="blog-post3-header_image"
                                         />
                                     </div>
@@ -456,8 +458,7 @@ import Footer from "../../components/footer.astro";
                                             <p>
                                                 <span>— Mr. Nishanth N</span><br
                                                 />
-                                                Founder Chairman, ICON SCHOOL OF
-                                                EXCELLENCE
+                                                Founder Chairman, ICON SCHOOL OF EXCELLENCE
                                             </p>
                                             <br />
                                             <h4>
@@ -503,6 +504,28 @@ import Footer from "../../components/footer.astro";
         </div>
     </body>
 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Life Lessons to Lifelong Legacy: The Vision Behind ICON School of Excellence",
+            "description": "The vision and philosophy behind ICON School of Excellence by Founder Chairman Mr Nishanth N.",
+            "author": {
+                "@type": "Person",
+                "name": "Mr Nishanth N"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "ICON School of Excellence"
+            },
+            "image": "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/Untitled-1.jpg",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://iconschoolofexcellence.com/blogs/why-icse"
+            }
+        }
+    </script>
+
     <style>
         .text-rich-text img {
             object-fit: cover;
@@ -526,7 +549,22 @@ import Footer from "../../components/footer.astro";
         }
         @media screen and (max-width: 800px) {
             .text-rich-text {
-                padding: 0px 40px;
+                padding: 0 20px;
+            }
+
+            .text-rich-text img {
+                width: 100%;
+                height: auto;
+            }
+
+            .text-rich-text h4 {
+                font-size: 1.5rem;
+            }
+
+            .text-rich-text p,
+            .text-rich-text li {
+                font-size: 16px;
+                line-height: 1.8;
             }
         }
     </style>

@@ -67,24 +67,47 @@
         <div class="image-overlay-layer"></div>
         <div class="carousel-wrapper">
             <div class="home-video">
-                <div class="responsive-iframe-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/jBu9KLtOI8U?autoplay=1&mute=1&loop=1&playlist=jBu9KLtOI8U&controls=0&rel=0&playsinline=1"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media; fullscreen"
-                        allowfullscreen></iframe>
-                </div>
+                <video
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    class="hero-video"
+                >
+                    <source src="videos/icon-herovideo.mp4" type="video/mp4" />
+                </video>
             </div>
         </div>
     </div>
 </header>
 
 <style>
+    .home-video {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .section_home_hero-header {
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
     .section_home_hero-header {
         position: relative;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
+        min-height: 100dvh;
         overflow: hidden;
     }
 
@@ -154,35 +177,6 @@
         border: 2px solid #fff;
     }
 
-    /* Video full cover */
-    .home-video {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 0;
-        overflow: hidden;
-    }
-
-    .responsive-iframe-wrapper {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-    }
-
-    .responsive-iframe-wrapper iframe {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100vw;
-        height: 56.25vw; /* 16:9 ratio */
-        min-height: 100%;
-        min-width: 177.77vh; /* 16:9 ratio */
-        transform: translate(-50%, -50%);
-    }
-
     /* Overlay */
     .image-overlay-layer {
         position: absolute;
@@ -236,15 +230,23 @@
 
 <script>
     // Optional heading text changer
-    const changingText = document.getElementById("changing-text");
-    const textArray = [
-        "Creating Role Models",
-        "Inspiring Young Minds",
-        "Shaping the Future",
-    ];
-    let textIndex = 0;
-    setInterval(() => {
-        textIndex = (textIndex + 1) % textArray.length;
-        changingText.innerHTML = textArray[textIndex].replace(" ", "<br/>");
-    }, 3000);
+    document.addEventListener("DOMContentLoaded", () => {
+        const changingText = document.getElementById("changing-text");
+
+        if (!changingText) return;
+
+        const textArray = [
+            "Creating Role Models",
+            "Inspiring Young Minds",
+            "Shaping the Future",
+        ];
+
+        let textIndex = 0;
+
+        setInterval(() => {
+            textIndex = (textIndex + 1) % textArray.length;
+
+            changingText.innerHTML = textArray[textIndex].replace(" ", "<br>");
+        }, 3000);
+    });
 </script>

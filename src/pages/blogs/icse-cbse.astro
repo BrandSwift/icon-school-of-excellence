@@ -37,8 +37,11 @@ import Footer from "../../components/footer.astro";
                   <div class="blog-post3-header_image-wrapper">
                     <img
                       src="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-cbse.webp?updatedAt=1745912228352"
-                      loading="eager"
-                      alt=""
+                      width="1200"
+                      height="675"
+                      loading="lazy"
+                      decoding="async"
+                      alt="ICSE vs CBSE Curriculum Comparison"
                       sizes="(max-width: 991px) 90vw, 47vw"
                       class="blog-post3-header_image"
                     />
@@ -219,13 +222,47 @@ import Footer from "../../components/footer.astro";
     </div>
   </body>
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "ICSE vs CBSE: Why ICSE Syllabus Could be the Best for Your Child in Bangalore",
+      "image": "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-cbse.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "ICON School of Excellence"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ICON School of Excellence"
+      }
+    }
+  </script>
+
   <style>
     .text-rich-text {
-      content: "";
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.8;
     }
+
+    .text-rich-text p {
+      margin-bottom: 1rem;
+    }
+
+    .text-rich-text ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    .text-rich-text h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
     @media screen and (max-width: 800px) {
       .text-rich-text {
-        padding: 0px 40px;
+        padding: 0 20px;
       }
     }
   </style>

@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+    {
+        src: "/assets/images/events/founders day/founders-day-6.webp",
+        alt: "icon-school-of-excellence-founders-day-1",
+    },
+    {
+        src: "/assets/images/events/founders day/founders-day-2.webp",
+        alt: "icon-school-of-excellence-founders-day-2",
+    },
+    {
+        src: "/assets/images/events/founders day/founders-day-3.webp",
+        alt: "icon-school-of-excellence-founders-day-3",
+    },
+    {
+        src: "/assets/images/events/founders day/founders-day-4.webp",
+        alt: "icon-school-of-excellence-founders-day-4",
+    },
+    {
+        src: "/assets/images/events/founders day/founders-day-6.webp",
+        alt: "icon-school-of-excellence-founders-day-5",
+    },
+];
+---
+
+<Layout
+    title="founders-day| Icon School of Excellence"
+    description="Explore the memorable moments from our Founder's Day celebration at ISOE."
+    keywords="Founder's Day celebration"
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/events/founders-day"
+>
+    <EventsList
+        event_title="Founder's Day celebration"
+        event_sub_title="Explore the memorable moments from our Founder's Day celebration at ISOE."
+        images={images}
+    />
+</Layout>

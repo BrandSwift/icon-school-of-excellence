@@ -18,6 +18,7 @@
                     >Nursery</button
                 >
                 <button class="sub-tab" data-sub="lkg">Junior KG (LKG)</button>
+                <button class="sub-tab" data-sub="ukg">Senior KG (UKG)</button>
                 <button class="sub-tab" data-sub="grade1">Grade 1</button>
             </div>
             <div class="sub-tab-content active" id="nursery">
@@ -52,6 +53,20 @@
                     />
                 </div>
             </div>
+
+            <div class="sub-tab-content" id="ukg">
+                <div class="content-block">
+                    <div>
+                        <h3>Senior KG (UKG)</h3>
+                        <p>
+                            The child seeking admission should be at least 5
+                            Years (as of May 31st)
+                        </p>
+                    </div>
+                    <img src="assets/images/ukg.jpg.jpeg" alt="UKG" />
+                </div>
+            </div>
+
             <div class="sub-tab-content" id="grade1">
                 <div class="content-block">
                     <div>
@@ -89,7 +104,7 @@
                         </p>
                     </div>
                     <img
-                        src="https://ik.imagekit.io/brandswift/isoe/assets/images/facilities/admission-1.webp?updatedAt=1745912103337"
+                        src="/assets/images/step -1.webp"
                         alt="Grade 1 admission"
                     />
                 </div>
@@ -105,7 +120,7 @@
                         </p>
                     </div>
                     <img
-                        src="https://ik.imagekit.io/brandswift/isoe/assets/images/facilities/admission-2.webp?updatedAt=1745912103538"
+                        src="/assets/images/step -2.webp"
                         alt="Grade 1 admission"
                     />
                 </div>
@@ -120,7 +135,7 @@
                         </p>
                     </div>
                     <img
-                        src="https://ik.imagekit.io/brandswift/isoe/assets/images/academics/seniorkg.JPG?updatedAt=1745912240941"
+                        src="/assets/images/step -3.webp"
                         alt="Grade 1 admission"
                     />
                 </div>
@@ -150,7 +165,7 @@
                     </ul>
                 </div>
                 <img
-                    src="https://ik.imagekit.io/brandswift/isoe/assets/images/facilities/admission-procedure.webp?updatedAt=1745912104374"
+                    src="/assets/images/Required Documents.webp"
                     loading="lazy"
                     decoding="async"
                     alt="icon-school-of-excellence-required-documents"
@@ -170,43 +185,36 @@
             </div>
             <div class="sub-tab-content active" id="preprimary">
                 <div class="fees">
-                    <table>
-                        <tr><th>Grade</th><th>Fees</th></tr>
-                        <tr><td>Nursery</td><td>65,950</td></tr>
-                        <tr><td>Junior KG</td><td>65,950</td></tr>
-                        <tr><td>Senior KG</td><td>69,480</td></tr>
-                    </table>
+                    <h3>Connect with Our Admissions Team..</h3>
                 </div>
             </div>
             <div class="sub-tab-content" id="primary">
                 <div class="fees">
-                    <table>
+                    <!-- <table>
                         <tr><th>Grade</th><th>Fees</th></tr>
                         <tr><td>Grade 1</td><td>72,860</td></tr>
                         <tr><td>Grade 2</td><td>75,800</td></tr>
                         <tr><td>Grade 3</td><td>77,470</td></tr>
                         <tr><td>Grade 4</td><td>78,140</td></tr>
                         <tr><td>Grade 5</td><td>78,370</td></tr>
-                    </table>
+                    </table> -->
+                    <div class="fees">
+                        <h3>Connect with Our Admissions Team..</h3>
+                    </div>
                 </div>
             </div>
             <div class="sub-tab-content" id="middle">
                 <div class="fees">
-                    <table>
-                        <tr><th>Grade</th><th>Fees</th></tr>
-                        <tr><td>Grade 6</td><td>80,080</td></tr>
-                        <tr><td>Grade 7</td><td>80,730</td></tr>
-                        <tr><td>Grade 8</td><td>82,670</td></tr>
-                    </table>
+                    <div class="fees">
+                        <h3>Connect with Our Admissions Team..</h3>
+                    </div>
                 </div>
             </div>
             <div class="sub-tab-content" id="high">
                 <div class="fees">
-                    <table>
-                        <tr><th>Grade</th><th>Fees</th></tr>
-                        <tr><td>Grade 9</td><td>86,560</td></tr>
-                        <tr><td>Grade 10</td><td>93,030</td></tr>
-                    </table>
+                    <div class="fees">
+                        <h3>Connect with Our Admissions Team..</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,7 +230,12 @@
         display: flex;
         gap: 50px;
     }
-
+    .documents-content img {
+        width: 100%;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
     .content-block h3 {
         padding-bottom: 20px;
     }
@@ -349,7 +362,9 @@
     .fees tr:nth-child(even) {
         background-color: #fff8f6;
     }
-
+    .fees h3 {
+        font-weight: bold;
+    }
     @keyframes fadeIn {
         from {
             opacity: 0;

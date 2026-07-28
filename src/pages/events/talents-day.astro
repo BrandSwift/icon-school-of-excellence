@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+    {
+        src: "/assets/images/events/talents-day/Talents-day-2.webp",
+        alt: "icon-school-of-excellence-Talents-day-1",
+    },
+    {
+        src: "/assets/images/events/talents-day/Talents-day-3.webp",
+        alt: "icon-school-of-excellence-Talents-day-2",
+    },
+    {
+        src: "/assets/images/events/talents-day/Talents-day-4.webp",
+        alt: "icon-school-of-excellence-Talents-day-3",
+    },
+    {
+        src: "/assets/images/events/talents-day/Talents-day-5.webp",
+        alt: "icon-school-of-excellence-Talents-day",
+    },
+    {
+        src: "/assets/images/events/talents-day/Talents-day-6.webp",
+        alt: "icon-school-of-excellence-Talents-day",
+    },
+];
+---
+
+<Layout
+    title="Talents-day| Icon School of Excellence"
+    description="Discover the inspiring moments from Talents Day at ICON School of Excellence, where every performance celebrated creativity, confidence, and the unique abilities of our young learners."
+    keywords="Talents Day celebration"
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/events/Talents-day"
+>
+    <EventsList
+        event_title="Talents Day celebration"
+        event_sub_title="Discover the inspiring moments from Talents Day at ICON School of Excellence, where every performance celebrated creativity, confidence, and the unique abilities of our young learners."
+        images={images}
+    />
+</Layout>

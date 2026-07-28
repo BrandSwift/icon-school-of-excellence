@@ -1,0 +1,41 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import EventsList from "../../components/events-list.astro";
+
+const images = [
+    {
+        src: "/assets/images/events/Staff Outing- Mango mist/Staff Outing- Mango mist -1.webp",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-1",
+    },
+    {
+        src: "/assets/images/events/Staff Outing- Mango mist/Staff Outing- Mango mist -2.webp",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-2",
+    },
+    {
+        src: "/assets/images/events/Staff Outing- Mango mist/Staff Outing- Mango mist -3.webp",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-3",
+    },
+    {
+        src: "/assets/images/events/Staff Outing- Mango mist/Staff Outing- Mango mist -4.webp",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-4",
+    },
+    {
+        src: "/assets/images/events/Staff Outing- Mango mist/Staff Outing- Mango mist -5.webp",
+        alt: "icon-school-of-excellence-Yoga Day-kindergarten-5",
+    },
+];
+---
+
+<Layout
+    title="Staff Outing- Mango mist| Icon School of Excellence"
+    description="Explore the memorable moments from our Staff Outing at Mango Mist, where our dedicated team enjoyed a day of fun, relaxation, team bonding, and unforgettable experiences together."
+    keywords="Yoga Day Bangalore, school wellness programs, yoga sessions, Icon School activities"
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/events/Staff-Outing-Mango-mist"
+>
+    <EventsList
+        event_title="Staff Outing- Mango mist"
+        event_sub_title="Explore the memorable moments from our Staff Outing at Mango Mist, where our dedicated team enjoyed a day of fun, relaxation, team bonding, and unforgettable experiences together."
+        images={images}
+    />
+</Layout>

@@ -5,17 +5,17 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
-    title=""
-    description=""
-    keywords=""
-    og_title=""
-    og_description=""
-    og_image=""
-    og_url=""
-    twitter_description=""
-    twitter_image=""
-    robots=""
-    canonical=""
+    title="Thank You | ICON School of Excellence"
+    description="Thank you for contacting ICON School of Excellence. Our admissions team will contact you shortly."
+    keywords="ICON School admissions, enquiry form, thank you page"
+    og_title="Thank You | ICON School of Excellence"
+    og_description="Thank you for your enquiry. Our admissions team will reach out soon."
+    og_image="/logo.webp"
+    og_url="https://iconschoolofexcellence.com/thankyou"
+    twitter_description="Thank you for contacting ICON School of Excellence."
+    twitter_image="/logo.webp"
+    robots="noindex,nofollow"
+    canonical="https://iconschoolofexcellence.com/thankyou"
 >
     <body>
         <div class="page-wrapper">
@@ -26,8 +26,12 @@ import Layout from "../layouts/Layout.astro";
                     <div class="blog-left">
                         <img
                             src="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-schools-in-bangalore.webp?updatedAt=1745912227384"
-                            alt="icon school of excellence"
-                            style="border-radius: 10px"
+                            loading="lazy"
+                            decoding="async"
+                            width="500"
+                            height="300"
+                            alt="How ICSE Schools in Bangalore Are Shaping the Future of Education"
+                            style="border-radius:10px"
                         />
                         <h5>
                             <a
@@ -44,9 +48,10 @@ import Layout from "../layouts/Layout.astro";
                     <div class="thank-content">
                         <img
                             src="/assets/images/icons/send-mail.png"
-                            loading="lazy"
-                            decoding="async"
-                            alt="icon-school-of-excellence-extra-curricular-activities-page"
+                            width="150"
+                            height="150"
+                            fetchpriority="high"
+                            alt="Thank You Submission"
                         />
                         <p
                             style="font-size: 35px; font-weight: 600; font-family: Poppins, sans-serif; padding-bottom: 20px; color: #e31e26;"
@@ -89,8 +94,12 @@ import Layout from "../layouts/Layout.astro";
                     <div class="blog-right">
                         <img
                             src="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icon-school-of-excellence-why-icse.webp?updatedAt=1745912226510"
-                            alt="icon-school-of-excellence-why-icse-school"
-                            style="border-radius: 10px"
+                            loading="lazy"
+                            decoding="async"
+                            width="500"
+                            height="300"
+                            alt="How ICSE Schools in Bangalore Are Shaping the Future of Education"
+                            style="border-radius:10px"
                         />
                         <h5>
                             <a
@@ -106,7 +115,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </body>
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
             const formData = JSON.parse(sessionStorage.getItem("formData"));
             if (formData) {
@@ -127,6 +136,33 @@ import Layout from "../layouts/Layout.astro";
                 window.location.href = "/";
             }
         });
+    </script> -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const storedData = sessionStorage.getItem("formData");
+
+            if (!storedData) {
+                window.location.replace("/");
+                return;
+            }
+
+            const formData = JSON.parse(storedData);
+
+            document.getElementById("thank-name").textContent =
+                `${formData.firstname || ""} ${formData.lastname || ""}`;
+
+            document.getElementById("thank-email").textContent =
+                formData.email || "";
+
+            document.getElementById("thank-phone").textContent =
+                formData.phonenumber || "";
+
+            document.getElementById("thank-message").textContent =
+                formData.message || "";
+
+            sessionStorage.removeItem("formData");
+        });
     </script>
 
     <style>
@@ -137,10 +173,9 @@ import Layout from "../layouts/Layout.astro";
             text-align: center;
         }
         .blog-left {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin-top: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
-            margin-left: 1rem;
+            overflow: hidden;
         }
         .thank-content {
             display: flex;
@@ -154,22 +189,27 @@ import Layout from "../layouts/Layout.astro";
             text-align: center;
         }
         .blog-right {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin-top: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             border-radius: 10px;
-            margin-right: 1rem;
+            overflow: hidden;
         }
         @media screen and (max-width: 990px) {
             .container-thank {
                 display: flex;
                 flex-direction: column;
-                margin-top: 10%;
+                gap: 20px;
+                padding: 20px;
+                margin-top: 20px;
             }
-            .blog-left {
-                display: none;
-            }
+
+            .blog-left,
             .blog-right {
                 display: none;
+            }
+
+            .thank-content {
+                min-height: auto;
+                padding: 20px;
             }
         }
     </style>

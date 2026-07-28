@@ -37,8 +37,11 @@ import Footer from "../../components/footer.astro";
                   <div class="blog-post3-header_image-wrapper">
                     <img
                       src="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-schools-in-bangalore.webp?updatedAt=1745912227384"
-                      loading="eager"
-                      alt="icse-schools-in-bangalore"
+                      loading="lazy"
+                      decoding="async"
+                      width="168"
+                      height="80"
+                      alt="How ICSE Schools in Bangalore Are Shaping the Future of Education"
                       sizes="(max-width: 991px) 90vw, 47vw"
                       class="blog-post3-header_image"
                     />
@@ -313,13 +316,27 @@ import Footer from "../../components/footer.astro";
     </div>
   </body>
 
-  <style>
-    .text-rich-text {
-      content: "";
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How ICSE Schools in Bangalore Are Shaping the Future of Education",
+      "image": "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-schools-in-bangalore.webp",
+      "author": {
+        "@type": "Organization",
+        "name": "ICON School of Excellence"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ICON School of Excellence"
+      }
     }
+  </script>
+
+  <style>
     @media screen and (max-width: 800px) {
       .text-rich-text {
-        padding: 0px 40px;
+        padding: 0 20px;
       }
     }
   </style>
