@@ -1,0 +1,1051 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/header.astro";
+import Footer from "../../components/footer.astro";
+
+const skills = [
+    {
+        number: "01",
+        title: "Confidence: The Foundation of Lifelong Learning",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/classes/academic-programme.webp?updatedAt=1745912211911",
+        content: `
+      <p>Children are not born confident.</p>
+      <p>Confidence is built gradually through everyday experiences.</p>
+      <p>Each time a child:</p>
+      <ul>
+        <li>answers a question in class,</li>
+        <li>presents an idea,</li>
+        <li>performs on stage,</li>
+        <li>participates in sports,</li>
+        <li>solves a challenging problem, or</li>
+        <li>receives encouragement after making a mistake,</li>
+      </ul>
+      <p>they strengthen their belief in their own abilities.</p>
+      <p>Schools play a powerful role in creating these opportunities.</p>
+      <p>At ICON School of Excellence, students are encouraged to participate, explore, and express themselves in a supportive environment where mistakes are viewed as valuable learning experiences.</p>
+    `,
+    },
+    {
+        number: "02",
+        title: "Curiosity: The Beginning of Every Great Discovery",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/about/mission.webp?updatedAt=1745912250145",
+        content: `
+      <p>Every child begins life with endless curiosity.</p>
+
+      <div class="questions">
+        <p>"Why is the sky blue?"</p>
+        <p>"How do airplanes fly?"</p>
+        <p>"What happens if…?"</p>
+      </div>
+
+      <p>The challenge is not teaching children to be curious.</p>
+      <p>The challenge is ensuring that curiosity isn't lost.</p>
+      <p>Schools that reward only correct answers may unintentionally discourage exploration.</p>
+      <p>Future-ready schools celebrate thoughtful questions just as much as correct responses.</p>
+
+      <p>When curiosity is encouraged, children become:</p>
+
+      <ul>
+        <li>independent thinkers,</li>
+        <li>lifelong learners,</li>
+        <li>creative innovators,</li>
+        <li>confident problem-solvers.</li>
+      </ul>
+
+      <p>This mindset supports success not only in school but throughout life.</p>
+    `,
+    },
+    {
+        number: "03",
+        title: "Emotional Intelligence: The Skill That Shapes Relationships",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/academics/high-school.webp?updatedAt=1745912234486",
+        content: `
+      <p>Academic achievement opens doors.</p>
+      <p>Emotional intelligence determines how well children navigate the world once those doors open.</p>
+
+      <p>Emotionally intelligent children are better able to:</p>
+
+      <ul>
+        <li>understand their feelings,</li>
+        <li>empathize with others,</li>
+        <li>resolve conflicts,</li>
+        <li>communicate respectfully,</li>
+        <li>build meaningful relationships,</li>
+        <li>manage stress,</li>
+        <li>demonstrate resilience.</li>
+      </ul>
+
+      <p>These qualities contribute to stronger teamwork, better leadership, and healthier well-being.</p>
+      <p>Schools that foster kindness, empathy, gratitude, and collaboration create learning environments where every child feels valued.</p>
+    `,
+    },
+    {
+        number: "04",
+        title: "Communication: The Skill Behind Every Future Career",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-schools-in-bangalore.webp?updatedAt=1745912227384",
+        content: `
+      <p>Regardless of whether your child becomes:</p>
+
+      <ul>
+        <li>a doctor,</li>
+        <li>engineer,</li>
+        <li>entrepreneur,</li>
+        <li>scientist,</li>
+        <li>lawyer,</li>
+        <li>designer,</li>
+        <li>teacher,</li>
+        <li>researcher,</li>
+      </ul>
+
+      <p>they will need to communicate effectively.</p>
+      <p>Communication extends beyond speaking English fluently.</p>
+      <p>It includes the ability to:</p>
+
+      <ul>
+        <li>explain ideas,</li>
+        <li>listen actively,</li>
+        <li>ask thoughtful questions,</li>
+        <li>write clearly,</li>
+        <li>present confidently,</li>
+        <li>collaborate respectfully.</li>
+      </ul>
+
+      <p>Children begin developing these abilities from their earliest classroom interactions.</p>
+      <p>Activities such as storytelling, debates, presentations, group discussions, and project work all contribute to stronger communication skills.</p>
+    `,
+    },
+    {
+        number: "05",
+        title: "Critical Thinking: Preparing Children for a World Full of Information",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-cbse.webp?updatedAt=1745912228352",
+        content: `
+      <p>Today's children have access to more information than any previous generation.</p>
+      <p>The challenge is no longer finding information.</p>
+      <p>It is knowing:</p>
+
+      <ul>
+        <li>what is accurate,</li>
+        <li>what is misleading,</li>
+        <li>how to analyze evidence,</li>
+        <li>how to evaluate different viewpoints,</li>
+        <li>how to make informed decisions.</li>
+      </ul>
+
+      <p>Critical thinking enables children to move beyond memorization and develop genuine understanding.</p>
+      <p>Schools that encourage inquiry-based learning, research, experimentation, and discussion help students build this essential capability.</p>
+    `,
+    },
+    {
+        number: "06",
+        title: "Creativity: The Future Belongs to Innovators",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icon-school-of-excellence-why-icse.webp?updatedAt=1745912226510",
+        content: `
+      <p>Creativity is often misunderstood.</p>
+      <p>It isn't limited to painting, music, or drama.</p>
+      <p>Creativity is the ability to generate new ideas, connect concepts, and solve problems in original ways.</p>
+      <p>Every industry values creative thinkers.</p>
+
+      <p>Creative children learn to:</p>
+
+      <ul>
+        <li>innovate,</li>
+        <li>experiment,</li>
+        <li>adapt,</li>
+        <li>design,</li>
+        <li>invent,</li>
+        <li>improve existing solutions.</li>
+      </ul>
+
+      <p>Schools that integrate arts, STEAM education, design thinking, and project-based learning help nurture this mindset.</p>
+    `,
+    },
+    {
+        number: "07",
+        title: "Collaboration: Learning to Succeed Together",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/blog/Untitled-1.jpg?updatedAt=1748696845888",
+        content: `
+      <p>Few careers today involve working alone.</p>
+      <p>Whether developing software, designing buildings, conducting scientific research, or running businesses, success depends on teamwork.</p>
+
+      <p>Children learn collaboration through:</p>
+
+      <ul>
+        <li>classroom projects,</li>
+        <li>sports,</li>
+        <li>leadership activities,</li>
+        <li>science exhibitions,</li>
+        <li>cultural events,</li>
+        <li>student councils,</li>
+        <li>community initiatives.</li>
+      </ul>
+
+      <p>Learning to appreciate different perspectives prepares students for an increasingly interconnected world.</p>
+    `,
+    },
+    {
+        number: "08",
+        title: "Resilience: Helping Children Thrive Through Challenges",
+        image: "https://ik.imagekit.io/brandswift/isoe/assets/images/classes/academic-programme.webp?updatedAt=1745912211911",
+        content: `
+      <p>Failure is not the opposite of success.</p>
+      <p>It is often part of the journey.</p>
+      <p>Children who develop resilience understand that setbacks provide opportunities for growth.</p>
+
+      <p>Resilient students are more likely to:</p>
+
+      <ul>
+        <li>persevere through difficult tasks,</li>
+        <li>remain motivated,</li>
+        <li>embrace constructive feedback,</li>
+        <li>recover from disappointment,</li>
+        <li>continue striving toward their goals.</li>
+      </ul>
+
+      <p>Supportive schools help students develop resilience by encouraging effort, celebrating progress, and fostering a growth mindset.</p>
+    `,
+    },
+];
+
+const checklist = [
+    "Does the school encourage curiosity and questioning?",
+    "Are communication and presentation skills emphasized?",
+    "Does the curriculum promote critical thinking over rote memorization?",
+    "Are students encouraged to participate in arts, sports, and leadership activities?",
+    "Is emotional well-being given equal importance to academics?",
+    "Does the school celebrate effort, creativity, and collaboration?",
+    "Are teachers approachable mentors rather than just instructors?",
+    "Does the learning environment inspire confidence and independence?",
+];
+---
+
+<Layout
+    title="The Invisible Skills That Determine Your Child's Future | ICON School of Excellence"
+    description="Discover the invisible skills that shape a child's future beyond report cards, including confidence, curiosity, emotional intelligence, communication, critical thinking, creativity, collaboration, and resilience."
+    keywords="child development, school education, future ready learners, ICSE school Bangalore, child skills, student development"
+    og_title="The Invisible Skills That Determine Your Child's Future"
+    og_description="Why confidence, curiosity, communication, creativity, critical thinking and resilience matter beyond academic achievement."
+    og_image="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-schools-in-bangalore.webp?updatedAt=1745912227384"
+    og_url="https://iconschoolofexcellence.com/blogs/invisible-skills-child-future"
+    twitter_description="The invisible skills that determine your child's future."
+    twitter_image="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-schools-in-bangalore.webp?updatedAt=1745912227384"
+    robots="index, follow"
+    canonical="https://iconschoolofexcellence.com/blogs/invisible-skills-child-future"
+>
+    <body>
+        <Header />
+
+        <main>
+            <!-- HERO -->
+            <section class="hero">
+                <div class="hero-inner">
+                    <div class="hero-meta">
+                        <span>PART 03</span>
+                        <span>THE INVISIBLE SKILLS</span>
+                    </div>
+
+                    <h1>
+                        The Invisible Skills That Determine
+                        <em>Your Child's Future</em>
+                    </h1>
+
+                    <div class="hero-bottom">
+                        <p>
+                            "Twenty years from now, employers may not remember
+                            your child's report card—but they will value how
+                            your child thinks, communicates, collaborates, and
+                            adapts."
+                        </p>
+
+                        <div class="hero-number">03</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INTRO -->
+            <section class="intro section">
+                <div class="container intro-grid">
+                    <div class="section-index">
+                        <span>01</span>
+                        <small>BEYOND<br />REPORT CARDS</small>
+                    </div>
+
+                    <div class="intro-content">
+                        <p class="opening">
+                            For generations, success in school was often
+                            measured by one number: marks.
+                        </p>
+
+                        <p>
+                            But the world your child will graduate into is
+                            dramatically different from the one their parents
+                            entered.
+                        </p>
+
+                        <p>
+                            Artificial Intelligence is automating routine work.
+                            Technology is reshaping industries. New careers are
+                            emerging faster than schools can update textbooks.
+                            In this rapidly evolving landscape, academic
+                            knowledge alone is no longer enough.
+                        </p>
+
+                        <p>
+                            The children who thrive tomorrow will be those who
+                            know how to learn, adapt, collaborate, innovate, and
+                            lead.
+                        </p>
+
+                        <p>
+                            The encouraging news? These essential life skills
+                            begin developing during the first ten years of
+                            school.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- BEYOND REPORT CARDS -->
+            <section class="dark-section">
+                <div class="container narrow">
+                    <span class="eyebrow light">BEYOND REPORT CARDS</span>
+
+                    <h2>What Success Really Looks Like</h2>
+
+                    <p>
+                        Imagine two students graduating with identical academic
+                        scores.
+                    </p>
+
+                    <p>
+                        One is confident, curious, and comfortable solving
+                        unfamiliar problems. They communicate ideas clearly,
+                        work well in teams, and embrace challenges.
+                    </p>
+
+                    <p>
+                        The other excels in examinations but struggles with
+                        uncertainty, avoids new experiences, and lacks
+                        confidence in collaborative settings.
+                    </p>
+
+                    <div class="question-large">
+                        Who is more prepared for university, the workplace, and
+                        life?
+                    </div>
+
+                    <p>Increasingly, it is the first student.</p>
+
+                    <p>
+                        This is why leading educators around the world emphasize
+                        holistic education—an approach that develops the whole
+                        child rather than focusing solely on academic
+                        performance.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SKILLS -->
+            <section class="skills section">
+                <div class="container">
+                    <div class="section-heading">
+                        <span class="eyebrow">THE EIGHT SKILLS</span>
+                        <h2>
+                            What Children Need<br />
+                            Beyond Marks
+                        </h2>
+                    </div>
+
+                    {
+                        skills.map((skill) => (
+                            <article class="skill">
+                                <div class="skill-number">{skill.number}</div>
+
+                                <div class="skill-main">
+                                    <div class="skill-image">
+                                        <img
+                                            src={skill.image}
+                                            alt={skill.title}
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    <div class="skill-copy">
+                                        <h3>{skill.title}</h3>
+
+                                        <Fragment set:html={skill.content} />
+
+                                        {skill.number === "01" && (
+                                            <div class="snippet">
+                                                <span>
+                                                    FEATURED SNIPPET ANSWER
+                                                </span>
+                                                <strong>
+                                                    Why is confidence important
+                                                    in school?
+                                                </strong>
+                                                <p>
+                                                    Confidence helps children
+                                                    participate actively, ask
+                                                    questions, embrace
+                                                    challenges, recover from
+                                                    setbacks, and develop a
+                                                    positive attitude toward
+                                                    lifelong learning. Confident
+                                                    students are often more
+                                                    engaged academically and
+                                                    socially.
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </article>
+                        ))
+                    }
+                </div>
+            </section>
+
+            <!-- CHECKLIST -->
+            <section class="checklist-section section">
+                <div class="container">
+                    <div class="checklist-heading">
+                        <span class="eyebrow">A PARENT'S CHECKLIST</span>
+
+                        <h2>
+                            Is Your Child's School<br />
+                            Preparing Them for Life?
+                        </h2>
+
+                        <p>
+                            Use this simple checklist when evaluating any
+                            school:
+                        </p>
+                    </div>
+
+                    <div class="checklist">
+                        <div class="checklist-head">
+                            <span>QUESTION</span>
+                            <span>YES</span>
+                            <span>NO</span>
+                        </div>
+
+                        {
+                            checklist.map((question) => (
+                                <div class="check-row">
+                                    <p>{question}</p>
+                                    <span>☐</span>
+                                    <span>☐</span>
+                                </div>
+                            ))
+                        }
+                    </div>
+
+                    <div class="check-result">
+                        <p>
+                            If you answer "Yes" to most of these questions,
+                            you're likely considering a school that prepares
+                            children not just for examinations—but for life.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ICON -->
+            <section class="icon-section">
+                <div class="icon-image">
+                    <img
+                        src="https://ik.imagekit.io/brandswift/isoe/assets/images/blog/icse-cbse.webp?updatedAt=1745912228352"
+                        alt="ICON School of Excellence"
+                        loading="lazy"
+                    />
+                </div>
+
+                <div class="icon-content">
+                    <span class="eyebrow light">ICON SCHOOL OF EXCELLENCE</span>
+
+                    <h2>
+                        How ICON School of Excellence Brings These Skills to
+                        Life
+                    </h2>
+
+                    <p>
+                        At ICON School of Excellence, education extends beyond
+                        academic achievement. The school's philosophy centers on
+                        nurturing confident, compassionate, and capable learners
+                        through a balanced approach that combines the ICSE
+                        curriculum with opportunities for inquiry, creativity,
+                        collaboration, and character development.
+                    </p>
+
+                    <p>
+                        Students engage in interactive classrooms, STEAM-based
+                        learning, co-curricular activities, leadership
+                        opportunities, and value-based education. This holistic
+                        approach helps them strengthen not only academic
+                        foundations but also the communication, resilience,
+                        empathy, and critical thinking skills needed for
+                        lifelong success.
+                    </p>
+                </div>
+            </section>
+
+            <!-- CLOSING -->
+            <section class="closing section">
+                <!-- <div class="container closing-inner">
+                    <span class="eyebrow">THE BIGGER PICTURE</span>
+
+                    <h2>
+                        A report card can measure<br />
+                        achievement. It cannot measure
+                        <em>everything that matters.</em>
+                    </h2>
+                </div> -->
+            </section>
+        </main>
+
+        <Footer />
+    </body>
+
+    <style>
+        :global(*) {
+            box-sizing: border-box;
+        }
+
+        :global(body) {
+            margin: 0;
+            background: #fff;
+            color: #454b54;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 50px));
+            margin: auto;
+        }
+
+        .narrow {
+            max-width: 850px;
+        }
+
+        .section {
+            padding: 110px 0;
+        }
+
+        .eyebrow {
+            display: block;
+            color: #c51f2a;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow.light {
+            color: #f27b83;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin: 0;
+            color: #102653;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 500;
+        }
+
+        p,
+        li {
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        /* HERO */
+
+        .hero {
+            background: #f5eee8;
+            padding: 100px 0 80px;
+            border-bottom: 1px solid #e4dcd5;
+        }
+
+        .hero-inner {
+            width: min(1120px, calc(100% - 50px));
+            margin: auto;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 50px;
+            color: #c51f2a;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 45px;
+        }
+
+        .hero h1 {
+            max-width: 950px;
+            font-size: clamp(48px, 7vw, 88px);
+            line-height: 1.02;
+            letter-spacing: -3px;
+        }
+
+        .hero h1 em {
+            display: block;
+            color: #c51f2a;
+            font-style: normal;
+        }
+
+        .hero-bottom {
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            gap: 60px;
+            align-items: end;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #d8cec5;
+        }
+
+        .hero-bottom p {
+            max-width: 700px;
+            margin: 0;
+            color: #555b64;
+            font-family: Georgia, serif;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .hero-number {
+            color: #c51f2a;
+            font-family: Georgia, serif;
+            font-size: 42px;
+        }
+
+        /* INTRO */
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 90px;
+        }
+
+        .section-index {
+            padding-top: 8px;
+            border-top: 1px solid #c51f2a;
+        }
+
+        .section-index span {
+            display: block;
+            color: #c51f2a;
+            font-family: Georgia, serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .section-index small {
+            color: #999;
+            font-size: 10px;
+            letter-spacing: 2px;
+            line-height: 1.7;
+        }
+
+        .intro-content {
+            max-width: 780px;
+        }
+
+        .intro-content .opening {
+            color: #102653;
+            font-family: Georgia, serif;
+            font-size: 28px;
+            line-height: 1.55;
+            margin-top: 0;
+        }
+
+        /* DARK SECTION */
+
+        .dark-section {
+            padding: 110px 0;
+            background: #102653;
+            color: #dfe4ed;
+        }
+
+        .dark-section h2 {
+            max-width: 700px;
+            margin: 20px 0 45px;
+            color: #fff;
+            font-size: clamp(40px, 5vw, 62px);
+            line-height: 1.1;
+        }
+
+        .dark-section p {
+            max-width: 760px;
+        }
+
+        .question-large {
+            margin: 55px 0;
+            padding: 35px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.25);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: 31px;
+            line-height: 1.45;
+        }
+
+        /* SKILLS */
+
+        .section-heading {
+            margin-bottom: 80px;
+        }
+
+        .section-heading h2,
+        .checklist-heading h2 {
+            margin-top: 18px;
+            font-size: clamp(42px, 5vw, 65px);
+            line-height: 1.08;
+        }
+
+        .skill {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 45px;
+            padding: 75px 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .skill-number {
+            color: #c51f2a;
+            font-family: Georgia, serif;
+            font-size: 24px;
+        }
+
+        .skill-main {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        .skill-image {
+            overflow: hidden;
+            background: #eee;
+        }
+
+        .skill-image img {
+            width: 100%;
+            height: 250px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .skill-copy h3 {
+            margin: 0 0 25px;
+            font-size: 35px;
+            line-height: 1.2;
+        }
+
+        .skill-copy p:first-child {
+            margin-top: 0;
+        }
+
+        .skill-copy ul {
+            padding-left: 22px;
+        }
+
+        .skill-copy li {
+            margin: 4px 0;
+        }
+
+        .questions {
+            margin: 30px 0;
+            padding-left: 25px;
+            border-left: 2px solid #c51f2a;
+        }
+
+        .questions p {
+            margin: 5px 0;
+            color: #102653;
+            font-family: Georgia, serif;
+            font-style: italic;
+        }
+
+        /* FEATURED SNIPPET */
+
+        .snippet {
+            margin-top: 45px;
+            padding: 28px 30px;
+            background: #f5eee8;
+            border-left: 3px solid #c51f2a;
+        }
+
+        .snippet span {
+            display: block;
+            margin-bottom: 14px;
+            color: #c51f2a;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .snippet strong {
+            display: block;
+            margin-bottom: 12px;
+            color: #102653;
+            font-family: Georgia, serif;
+            font-size: 20px;
+        }
+
+        .snippet p {
+            margin-bottom: 0;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        /* CHECKLIST */
+
+        .checklist-section {
+            background: #f7f7f5;
+        }
+
+        .checklist-heading {
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+
+        .checklist-heading p {
+            margin-top: 25px;
+        }
+
+        .checklist {
+            border-top: 1px solid #cfcfcf;
+        }
+
+        .checklist-head,
+        .check-row {
+            display: grid;
+            grid-template-columns: 1fr 70px 70px;
+        }
+
+        .checklist-head {
+            padding: 15px 0;
+            color: #999;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        .checklist-head span:not(:first-child) {
+            text-align: center;
+        }
+
+        .check-row {
+            align-items: center;
+            min-height: 72px;
+            border-top: 1px solid #ddd;
+        }
+
+        .check-row p {
+            margin: 0;
+            padding-right: 30px;
+            font-size: 16px;
+        }
+
+        .check-row span {
+            text-align: center;
+            color: #c51f2a;
+            font-size: 20px;
+        }
+
+        .check-result {
+            margin-top: 45px;
+            padding: 30px;
+            background: #102653;
+        }
+
+        .check-result p {
+            margin: 0;
+            color: #fff;
+            font-family: Georgia, serif;
+            font-size: 19px;
+        }
+
+        /* ICON */
+
+        .icon-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background: #102653;
+        }
+
+        .icon-image {
+            min-height: 600px;
+        }
+
+        .icon-image img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .icon-content {
+            padding: 90px;
+            align-self: center;
+        }
+
+        .icon-content h2 {
+            margin: 20px 0 35px;
+            color: #fff;
+            font-size: clamp(38px, 4vw, 55px);
+            line-height: 1.12;
+        }
+
+        .icon-content p {
+            color: #dce1e9;
+        }
+
+        /* CLOSING */
+
+        .closing {
+            padding: 130px 0;
+        }
+
+        .closing-inner {
+            border-top: 1px solid #c51f2a;
+            padding-top: 30px;
+        }
+
+        .closing h2 {
+            max-width: 900px;
+            margin-top: 35px;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.08;
+        }
+
+        .closing h2 em {
+            color: #c51f2a;
+            font-style: normal;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .section {
+                padding: 75px 0;
+            }
+
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .skill {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .skill-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .skill-image img {
+                height: 300px;
+            }
+
+            .icon-section {
+                grid-template-columns: 1fr;
+            }
+
+            .icon-image {
+                min-height: 350px;
+            }
+
+            .icon-content {
+                padding: 60px 30px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container,
+            .hero-inner {
+                width: calc(100% - 30px);
+            }
+
+            .hero {
+                padding: 65px 0 55px;
+            }
+
+            .hero-meta {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+                letter-spacing: -1.5px;
+            }
+
+            .hero-bottom {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .hero-bottom p {
+                font-size: 18px;
+            }
+
+            p,
+            li {
+                font-size: 16px;
+                line-height: 1.8;
+            }
+
+            .intro-content .opening {
+                font-size: 23px;
+            }
+
+            .dark-section {
+                padding: 75px 0;
+            }
+
+            .question-large {
+                font-size: 25px;
+            }
+
+            .section-heading,
+            .checklist-heading {
+                margin-bottom: 50px;
+            }
+
+            .skill {
+                padding: 55px 0;
+            }
+
+            .skill-copy h3 {
+                font-size: 30px;
+            }
+
+            .checklist-head,
+            .check-row {
+                grid-template-columns: 1fr 45px 45px;
+            }
+
+            .check-row p {
+                font-size: 14px;
+                padding-right: 10px;
+            }
+
+            .checklist-head {
+                font-size: 9px;
+            }
+
+            .icon-content {
+                padding: 55px 20px;
+            }
+
+            .closing {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</Layout>
