@@ -32,6 +32,7 @@ import Footer from "../components/footer.astro";
           </div>
         </header>
 
+        <!-- CONTACT FORM -->
         <section id="contact-us-form" class="section_contact2">
           <article class="padding-global-4 background-color-alternative">
             <div class="container-small-4">
@@ -48,96 +49,112 @@ import Footer from "../components/footer.astro";
 
                 <form
                   id="contact-form"
-                  name="contact us form"
-                  method="get"
+                  name="contact-us-form"
                   class="contact2_form"
-                  data-wf-page-id="66b3535dbe5f2bbae424d2ae"
-                  data-wf-element-id="4e4d0f90-35db-017e-103f-482f5060016c"
-                  action="/thankyou"
                 >
+                  <!-- FIRST NAME + LAST NAME -->
                   <div class="form_field-2col">
                     <div class="form_field-wrapper">
                       <label
                         for="firstname"
                         class="form_field-label text-color-white"
-                        >First name</label
                       >
+                        First name
+                      </label>
+
                       <input
                         class="form_input-3 w-input"
                         maxlength="256"
                         name="firstname"
-                        placeholder="first name here"
+                        placeholder="First name"
                         type="text"
-                        id="First-Name"
-                        required=""
-                      />
-                    </div>
-                    <div class="form_field-wrapper">
-                      <label
-                        for="lastname"
-                        class="form_field-label text-color-white"
-                        >Last name</label
-                      >
-                      <input
-                        class="form_input-3 w-input"
-                        maxlength="256"
-                        name="lastname"
-                        placeholder="last name here"
-                        type="text"
-                        id="Last-Name"
-                        required=""
-                      />
-                    </div>
-                  </div>
-                  <div class="form_field-2col is-mobile-1col">
-                    <div class="form_field-wrapper">
-                      <label
-                        for="email"
-                        class="form_field-label text-color-white">Email</label
-                      >
-                      <input
-                        class="form_input-3 w-input"
-                        maxlength="256"
-                        name="email"
-                        placeholder="email"
-                        type="email"
-                        id="Email-3"
-                        required=""
+                        id="firstname"
+                        required
                       />
                     </div>
 
                     <div class="form_field-wrapper">
                       <label
-                        for="Phone"
+                        for="lastname"
                         class="form_field-label text-color-white"
-                        >Mobile number</label
                       >
+                        Last name
+                      </label>
+
                       <input
                         class="form_input-3 w-input"
                         maxlength="256"
-                        name="phonenumber"
-                        placeholder="mobile number"
-                        type="tel"
-                        id="Phone"
-                        required=""
+                        name="lastname"
+                        placeholder="Last name"
+                        type="text"
+                        id="lastname"
+                        required
                       />
                     </div>
                   </div>
+
+                  <!-- EMAIL + PHONE -->
+                  <div class="form_field-2col is-mobile-1col">
+                    <div class="form_field-wrapper">
+                      <label
+                        for="email"
+                        class="form_field-label text-color-white"
+                      >
+                        Email
+                      </label>
+
+                      <input
+                        class="form_input-3 w-input"
+                        maxlength="256"
+                        name="email"
+                        placeholder="Email"
+                        type="email"
+                        id="email"
+                        required
+                      />
+                    </div>
+
+                    <div class="form_field-wrapper">
+                      <label
+                        for="phonenumber"
+                        class="form_field-label text-color-white"
+                      >
+                        Mobile number
+                      </label>
+
+                      <input
+                        class="form_input-3 w-input"
+                        maxlength="15"
+                        name="phonenumber"
+                        placeholder="Mobile number"
+                        type="tel"
+                        id="phonenumber"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <!-- MESSAGE -->
                   <div class="form_field-wrapper">
                     <label
                       for="message"
-                      class="form_field-label text-color-white">Message</label
+                      class="form_field-label text-color-white"
                     >
+                      Message
+                    </label>
+
                     <textarea
-                      id="Message"
+                      id="message"
                       name="message"
                       maxlength="5000"
-                      data-name="Message"
                       placeholder="Type your message..."
-                      required=""
+                      required
                       class="form_input-3 is-text-area w-input"></textarea>
                   </div>
+
                   <div class="margin-bottom margin-xsmall"></div>
+
+                  <!-- SUBMIT BUTTON -->
                   <input
                     type="submit"
                     data-wait="Please wait..."
@@ -150,37 +167,16 @@ import Footer from "../components/footer.astro";
           </article>
         </section>
 
+        <!-- CONTACT INFORMATION -->
         <section class="section_contact-us_contact">
           <div class="padding-global">
             <div class="container-large">
               <div class="padding-section-large">
                 <div class="w-layout-grid contact-us_contact_component">
-                  <div
-                    blocks-name="contact21_item"
-                    blocks-slot-children="ST232"
-                    class="contact-us_contact_item"
-                  >
+                  <!-- GENERAL INQUIRIES -->
+                  <div class="contact-us_contact_item">
                     <div class="margin-bottom margin-small">
-                      <div
-                        blocks-name="contact21_icon-wrapper"
-                        class="contact-us_contact_icon-wrapper"
-                      >
-                        <!-- <div class="icon-embed-medium w-embed">
-                          <svg
-                            width=" 100%"
-                            height=" 100%"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill="currentColor"
-                              d="M19 3h-4.18C14.4 1.84 13.3 1 12 1s-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-7 0c.55 0 1 .45 1 1s-.45 1-1 1s-1-.45-1-1s.45-1 1-1m0 4c1.66 0 3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3s1.34-3 3-3m6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1z"
-                            >
-                            </path>
-                          </svg>
-                        </div> -->
-
+                      <div class="contact-us_contact_icon-wrapper">
                         <div class="contact-icon">
                           <img
                             src="assets/images/question_9256533.png"
@@ -191,165 +187,132 @@ import Footer from "../components/footer.astro";
                         </div>
                       </div>
                     </div>
+
                     <div class="margin-bottom margin-xsmall">
-                      <h3
-                        blocks-name="heading-style-h4"
-                        class="heading-style-h4"
-                      >
-                        General Inquiries
-                      </h3>
+                      <h3 class="heading-style-h4">General Inquiries</h3>
                     </div>
+
                     <div class="margin-bottom margin-small">
-                      <p blocks-name="paragraph">
+                      <p>
                         For general inquiries, please contact us using the
                         information below:
                       </p>
                     </div>
-                    <a
-                      blocks-name="link"
-                      href="tel:08048655622"
-                      class="text-style-link">080-48655622</a
-                    >
-                    <a
-                      blocks-name="link"
-                      href="tel:08048655633"
-                      class="text-style-link">080-48655633</a
-                    >
+
+                    <a href="tel:08048655622" class="text-style-link">
+                      080-48655622
+                    </a>
+
+                    <a href="tel:08048655633" class="text-style-link">
+                      080-48655633
+                    </a>
                   </div>
-                  <div
-                    blocks-name="contact21_item"
-                    blocks-slot-children="ST232"
-                    class="contact-us_contact_item"
-                  >
+
+                  <!-- ADMISSIONS -->
+                  <div class="contact-us_contact_item">
                     <div class="margin-bottom margin-small">
-                      <div
-                        blocks-name="contact21_icon-wrapper"
-                        class="contact-us_contact_icon-wrapper"
-                      >
+                      <div class="contact-us_contact_icon-wrapper">
                         <div class="contact-icon">
                           <img
                             src="assets/images/contract_13065534.png"
-                            alt="General Inquiries"
+                            alt="Admissions"
                             loading="lazy"
                             decoding="async"
                           />
                         </div>
                       </div>
                     </div>
+
                     <div class="margin-bottom margin-xsmall">
-                      <h3
-                        blocks-name="heading-style-h4"
-                        class="heading-style-h4"
-                      >
-                        Admissions
-                      </h3>
+                      <h3 class="heading-style-h4">Admissions</h3>
                     </div>
+
                     <div class="margin-bottom margin-small">
-                      <p blocks-name="paragraph">
-                        For general inquiries, please contact us using the
-                        information below
+                      <p>
+                        For admissions related inquiries, please contact us
+                        using the information below.
                       </p>
                     </div>
 
-                    <a
-                      blocks-name="link"
-                      href="tel:+918431006918"
-                      class="text-style-link">+91 84310 06918</a
-                    >
-                    <a
-                      blocks-name="link"
-                      href="tel:+918431096534"
-                      class="text-style-link">+91 84310 96534</a
-                    >
+                    <a href="tel:+918431006918" class="text-style-link">
+                      +91 84310 06918
+                    </a>
+
+                    <a href="tel:+918431096534" class="text-style-link">
+                      +91 84310 96534
+                    </a>
                   </div>
-                  <div
-                    blocks-name="contact21_item"
-                    blocks-slot-children="ST232"
-                    class="contact-us_contact_item"
-                  >
+
+                  <!-- CAREERS -->
+                  <div class="contact-us_contact_item">
                     <div class="margin-bottom margin-small">
-                      <div
-                        blocks-name="contact21_icon-wrapper"
-                        class="contact-us_contact_icon-wrapper"
-                      >
+                      <div class="contact-us_contact_icon-wrapper">
                         <div class="contact-icon">
                           <img
                             src="assets/images/career-development_12217057.png"
-                            alt="General Inquiries"
+                            alt="Careers"
                             loading="lazy"
                             decoding="async"
                           />
                         </div>
                       </div>
                     </div>
+
                     <div class="margin-bottom margin-xsmall">
-                      <h3
-                        blocks-name="heading-style-h4"
-                        class="heading-style-h4"
-                      >
-                        Careers
-                      </h3>
+                      <h3 class="heading-style-h4">Careers</h3>
                     </div>
+
                     <div class="margin-bottom margin-small">
-                      <p blocks-name="paragraph">
+                      <p>
                         For career related inquiries, please contact us using
-                        the information below
+                        the information below.
                       </p>
                     </div>
 
-                    <a
-                      blocks-name="link"
-                      href="tel:+919742008335"
-                      class="text-style-link">+91 97420 08335</a
-                    >
-                    <a
-                      blocks-name="link"
-                      href="tel:+919742271794"
-                      class="text-style-link">+91 97422 71794</a
-                    >
+                    <a href="tel:+919742008335" class="text-style-link">
+                      +91 97420 08335
+                    </a>
+
+                    <a href="tel:+919742271794" class="text-style-link">
+                      +91 97422 71794
+                    </a>
                   </div>
-                  <div
-                    blocks-name="contact21_item"
-                    blocks-slot-children="ST232"
-                    id="w-node-adc97d97-07c1-6316-f143-42b25677a167-e424d2ae"
-                    class="contact-us_contact_item"
-                  >
+
+                  <!-- WRITE US -->
+                  <div class="contact-us_contact_item">
                     <div class="margin-bottom margin-small">
-                      <div
-                        blocks-name="contact21_icon-wrapper"
-                        class="contact-us_contact_icon-wrapper"
-                      >
+                      <div class="contact-us_contact_icon-wrapper">
                         <div class="contact-icon">
                           <img
                             src="assets/images/edit-page_2933402.png"
-                            alt="General Inquiries"
+                            alt="Write Us"
                             loading="lazy"
                             decoding="async"
                           />
                         </div>
                       </div>
                     </div>
+
                     <div class="margin-bottom margin-xsmall">
-                      <h3
-                        blocks-name="heading-style-h4"
-                        class="heading-style-h4"
-                      >
-                        Write Us
-                      </h3>
+                      <h3 class="heading-style-h4">Write Us</h3>
                     </div>
+
                     <div class="margin-bottom margin-small">
-                      <p blocks-name="paragraph">
-                        For inquiries related to admissions or any general
-                        questions, please reach out to us via email
+                      <p>
+                        For inquiries related to admissions or general
+                        questions, please reach out to us via email.
                       </p>
-                    </div><a
-                      blocks-name="link"
+                    </div>
+
+                    <a
                       href="mailto:management@iconschoolofexcellence.com"
                       class="text-style-link"
-                      >management@iconschoolofexcellence.com<br /></a
                     >
+                      management@iconschoolofexcellence.com
+                    </a>
                   </div>
 
+                  <!-- GOOGLE MAP -->
                   <div class="location-contact">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d31115.71624097674!2d77.5716864!3d12.877824000000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x3bae6b62481ad1d7%3A0xcffe4df2e1f3466e!2sICON%20SCHOOL%20OF%20EXCELLENCE%2C%20118%2F2%2C%20Bettadasanapura%20Main%20Rd%2C%20Doddathoguru%2C%20Electronics%20City%20Phase%201%2C%20Electronic%20City%2C%20Bengaluru%2C%20Karnataka%20560100!3m2!1d12.8499097!2d77.65088159999999!5e0!3m2!1sen!2sin!4v1729927082125!5m2!1sen!2sin"
@@ -357,7 +320,8 @@ import Footer from "../components/footer.astro";
                       height="300"
                       style="border:0;"
                       loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      referrerpolicy="no-referrer-when-downgrade"
+                      title="Icon School of Excellence location"></iframe>
                   </div>
                 </div>
               </div>
@@ -365,35 +329,54 @@ import Footer from "../components/footer.astro";
           </div>
         </section>
       </main>
+
       <Footer />
     </div>
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    <!-- EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
     ></script>
 
-    <script type="text/javascript">
-      (function () {
+    <!-- CONTACT FORM SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize EmailJS
         emailjs.init("GVSffkGZ-u9LItjQa");
-      })();
 
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (event) {
+        const contactForm = document.getElementById("contact-form");
+
+        if (!contactForm) {
+          console.error("Contact form not found.");
+          return;
+        }
+
+        contactForm.addEventListener("submit", function (event) {
           event.preventDefault();
-          const submitButton = event.target.querySelector(
+
+          const submitButton = contactForm.querySelector(
             'input[type="submit"]',
           );
+
+          if (!submitButton) {
+            console.error("Submit button not found.");
+            return;
+          }
+
+          // Disable button while sending
+          submitButton.disabled = true;
           submitButton.classList.add("button-loading");
           submitButton.value = "Loading...";
 
-          const formData = new FormData(event.target);
+          // Get form data
+          const formData = new FormData(contactForm);
+
           const data = Object.fromEntries(formData.entries());
 
+          // Store form data for Thank You page
           sessionStorage.setItem("formData", JSON.stringify(data));
 
-          var templateParams = {
+          // EmailJS template parameters
+          const templateParams = {
             firstname: data.firstname,
             lastname: data.lastname,
             email: data.email,
@@ -401,22 +384,42 @@ import Footer from "../components/footer.astro";
             message: data.message,
           };
 
+          // Send email through EmailJS
           emailjs
             .send("service_9tkfj6t", "template_eu083gf", templateParams)
             .then(function (response) {
-              window.location.href = "/thankyou";
+              console.log("EmailJS Success:", response);
 
-              event.target.reset();
+              // Meta Pixel Lead Event
+              if (typeof window.fbq === "function") {
+                window.fbq("track", "Lead");
+              }
+
+              // Reset form
+              contactForm.reset();
+
+              // Reset button
+              submitButton.disabled = false;
               submitButton.classList.remove("button-loading");
               submitButton.value = "Submit";
+
+              // Redirect to Thank You page
+              setTimeout(function () {
+                window.location.href = "/thankyou";
+              }, 500);
             })
             .catch(function (error) {
               console.error("EmailJS Error:", error);
-              window.alert("Oops! Something went wrong.");
+
+              window.alert("Oops! Something went wrong. Please try again.");
+
+              // Restore button
+              submitButton.disabled = false;
               submitButton.classList.remove("button-loading");
               submitButton.value = "Submit";
             });
         });
+      });
     </script>
   </body>
 </Layout>

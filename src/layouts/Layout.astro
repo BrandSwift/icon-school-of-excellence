@@ -1,6 +1,6 @@
 ---
-import { string } from 'astro:schema';
-import '../styles/global.css';
+import { string } from "astro:schema";
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -42,9 +42,9 @@ const {
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'G-KZ4KGRXYRT');
+      gtag("config", "G-KZ4KGRXYRT");
     </script>
 
     <script
@@ -55,24 +55,57 @@ const {
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag('js', new Date());
+      gtag("js", new Date());
 
-      gtag('config', 'AW-16835039576');
+      gtag("config", "AW-16835039576");
     </script>
     <!-- Google Tag Manager -->
+
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
+          dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-MCTKCJGQ');
+      })(window, document, "script", "dataLayer", "GTM-MCTKCJGQ");
     </script>
     <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+
+      fbq("init", "2837085656672216");
+      fbq("track", "PageView");
+    </script>
+
+    <!-- End Meta Pixel Code -->
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -183,6 +216,17 @@ const {
     </style>
   </head>
   <body>
+    <!-- Meta Pixel Code (noscript) -->
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display:none"
+        src="https://www.facebook.com/tr?id=2837085656672216&ev=PageView&noscript=1"
+      />
+    </noscript>
+    <!-- End Meta Pixel Code (noscript) -->
+
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
@@ -199,7 +243,7 @@ const {
           color: inherit;
         }
         *[tabindex]:focus-visible,
-        input[type='file']:focus-visible {
+        input[type="file"]:focus-visible {
           outline: 0.125rem solid #4d65ff;
           outline-offset: 0.125rem;
         }
@@ -220,7 +264,7 @@ const {
           pointer-events: auto;
         }
         .div-square::after {
-          content: '';
+          content: "";
           display: block;
           padding-bottom: 100%;
         }
